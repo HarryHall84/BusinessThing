@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Hjelp-->
+        <!--Sign-in-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BusinessThing" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Hjelp" image="square.and.arrow.up.trianglebadge.exclamationmark" catalog="system" id="VGg-pM-5hb"/>
+                    <tabBarItem key="tabBarItem" title="Sign-in" image="square.and.arrow.up.trianglebadge.exclamationmark" catalog="system" id="VGg-pM-5hb"/>
                     <navigationItem key="navigationItem" id="6js-22-Ia9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -35,14 +35,14 @@
                         <viewLayoutGuide key="safeArea" id="7Qs-jV-wuH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Upcoming Assignments" id="4y5-m8-MYX"/>
+                    <tabBarItem key="tabBarItem" title="Upcoming Assignments" image="arrow.up.doc.on.clipboard" catalog="system" id="4y5-m8-MYX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59B-1x-mI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="674" y="1039"/>
         </scene>
-        <!--Calender-->
+        <!--Calendar Hiearchy-->
         <scene sceneID="Waf-b3-pA5">
             <objects>
                 <viewController id="fbY-ai-k5v" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                         <viewLayoutGuide key="safeArea" id="eko-zq-a5a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calender" id="Lwf-Eb-teE"/>
+                    <tabBarItem key="tabBarItem" title="Calendar Hiearchy" image="calendar.badge.clock.rtl" catalog="system" id="Lwf-Eb-teE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOv-F3-udd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -69,7 +69,7 @@
                         <viewLayoutGuide key="safeArea" id="hgb-60-5Vw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Missing Assignments" id="0CL-ww-w4F"/>
+                    <tabBarItem key="tabBarItem" title="Missing Assignments" image="exclamationmark.octagon.fill" catalog="system" id="0CL-ww-w4F"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1RG-cY-ydL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -124,6 +124,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.up.doc.on.clipboard" catalog="system" width="116" height="128"/>
+        <image name="calendar.badge.clock.rtl" catalog="system" width="128" height="108"/>
+        <image name="exclamationmark.octagon.fill" catalog="system" width="128" height="112"/>
         <image name="square.and.arrow.up.trianglebadge.exclamationmark" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
