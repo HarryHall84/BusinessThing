@@ -62,7 +62,7 @@
                         <viewLayoutGuide key="safeArea" id="7Qs-jV-wuH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New Assignments" image="arrow.up.doc.on.clipboard" catalog="system" id="4y5-m8-MYX"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="New Assignments" image="arrow.up.doc.on.clipboard" catalog="system" id="4y5-m8-MYX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59B-1x-mI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -79,7 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="eko-zq-a5a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar Hiearchy" image="calendar.badge.clock.rtl" catalog="system" id="Lwf-Eb-teE"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Calendar Hiearchy" image="calendar.badge.clock.rtl" catalog="system" id="Lwf-Eb-teE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOv-F3-udd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -96,7 +96,7 @@
                         <viewLayoutGuide key="safeArea" id="hgb-60-5Vw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Missing Work" image="exclamationmark.octagon.fill" catalog="system" id="0CL-ww-w4F"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Missing Work" image="exclamationmark.octagon.fill" catalog="system" id="0CL-ww-w4F"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1RG-cY-ydL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -132,7 +132,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="v4l-Rn-2e8"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <tabBar key="tabBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CgC-I1-iey">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CgC-I1-iey">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

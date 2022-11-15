@@ -34,7 +34,9 @@ class ViewController: UIViewController
         if(isLogged)
         {
             loginButton.isHidden = true
-            tabBarController?.tabBar.isHidden = false
+            tabBarController?.tabBar.items?[1].isEnabled = true
+            tabBarController?.tabBar.items?[2].isEnabled = true
+            tabBarController?.tabBar.items?[3].isEnabled = true
         }
     }
 }
