@@ -28,7 +28,7 @@
         <!--Upcoming Assignments-->
         <scene sceneID="aEE-N2-8Py">
             <objects>
-                <viewController id="LFy-9r-hml" sceneMemberID="viewController">
+                <viewController id="LFy-9r-hml" customClass="UpcomingAssignments" customModule="BusinessThing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="izr-8P-kdw">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
         <!--Calendar Hiearchy-->
         <scene sceneID="Waf-b3-pA5">
             <objects>
-                <viewController id="fbY-ai-k5v" sceneMemberID="viewController">
+                <viewController id="fbY-ai-k5v" customClass="Calendar" customModule="BusinessThing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hM5-om-bhL">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
         <!--Missing Assignments-->
         <scene sceneID="T8A-tT-KQ9">
             <objects>
-                <viewController id="0Cf-fu-vrY" sceneMemberID="viewController">
+                <viewController id="0Cf-fu-vrY" customClass="MissingAssignments" customModule="BusinessThing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QRp-Hy-3bR">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
