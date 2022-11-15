@@ -52,7 +52,7 @@
             </objects>
             <point key="canvasLocation" x="1768" y="323"/>
         </scene>
-        <!--Upcoming Assignments-->
+        <!--New Assignments-->
         <scene sceneID="aEE-N2-8Py">
             <objects>
                 <viewController id="LFy-9r-hml" customClass="ViewController" customModule="BusinessThing" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,11 +62,8 @@
                         <viewLayoutGuide key="safeArea" id="7Qs-jV-wuH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" enabled="NO" title="Upcoming Assignments" image="arrow.up.doc.on.clipboard" catalog="system" id="4y5-m8-MYX"/>
+                    <tabBarItem key="tabBarItem" title="New Assignments" image="arrow.up.doc.on.clipboard" catalog="system" id="4y5-m8-MYX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="UpAssign" destination="4y5-m8-MYX" id="N0E-6P-0MI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59B-1x-mI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,18 +79,14 @@
                         <viewLayoutGuide key="safeArea" id="eko-zq-a5a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" enabled="NO" title="Calendar Hiearchy" image="calendar.badge.clock.rtl" catalog="system" id="Lwf-Eb-teE"/>
+                    <tabBarItem key="tabBarItem" title="Calendar Hiearchy" image="calendar.badge.clock.rtl" catalog="system" id="Lwf-Eb-teE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="UpAssign" destination="Lwf-Eb-teE" id="Ohm-hR-Zxv"/>
-                        <outlet property="calHiearchy" destination="Lwf-Eb-teE" id="jeA-ln-JTa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOv-F3-udd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1638" y="1039"/>
         </scene>
-        <!--Missing Assignments-->
+        <!--Missing Work-->
         <scene sceneID="T8A-tT-KQ9">
             <objects>
                 <viewController id="0Cf-fu-vrY" customClass="ViewController" customModule="BusinessThing" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,11 +96,8 @@
                         <viewLayoutGuide key="safeArea" id="hgb-60-5Vw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" enabled="NO" title="Missing Assignments" image="exclamationmark.octagon.fill" catalog="system" id="0CL-ww-w4F"/>
+                    <tabBarItem key="tabBarItem" title="Missing Work" image="exclamationmark.octagon.fill" catalog="system" id="0CL-ww-w4F"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="misAssignments" destination="0CL-ww-w4F" id="vZx-2G-2Q5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1RG-cY-ydL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,11 +132,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="v4l-Rn-2e8"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CgC-I1-iey">
+                    <tabBar key="tabBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CgC-I1-iey">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <tabBarAppearance key="scrollEdgeAppearance"/>
+                        <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="AGS-C1-BLJ"/>

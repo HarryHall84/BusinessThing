@@ -2,10 +2,7 @@
 import UIKit
 class ViewController: UIViewController
 {
-    @IBOutlet weak var misAssignments: UITabBarItem!
     var isLogged = false
-    @IBOutlet weak var calHiearchy: UITabBarItem!
-    @IBOutlet weak var UpAssign: UITabBarItem!
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad()
     {
@@ -27,6 +24,7 @@ class ViewController: UIViewController
             {
                 self.isLogged = true
             }
+            self.updateAll()
         }))
         err.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(err, animated: true, completion: nil)
@@ -36,9 +34,7 @@ class ViewController: UIViewController
         if(isLogged)
         {
             loginButton.isHidden = true
-            UpAssign.isEnabled = true
-            calHiearchy.isEnabled = true
-            misAssignments.isEnabled = true
+            tabBarController?.tabBar.isHidden = false
         }
     }
 }
