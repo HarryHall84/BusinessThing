@@ -7,15 +7,29 @@
 
 import UIKit
 
-class UpcomingAssignments: UIViewController {
-
+class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    @IBOutlet weak var tableViewOutlet: UITableView!
+    
     override func viewDidLoad() {
+        tableViewOutlet.dataSource = true
+        tableViewOutlet.delegate = true
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "myCell")!
+        return cell
 
+    }
+    
+    
     /*
     // MARK: - Navigation
 

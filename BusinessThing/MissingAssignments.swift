@@ -8,7 +8,9 @@
 import UIKit
 
 class MissingAssignments: UIViewController {
-
+    
+    @IBOutlet weak var missingAssignText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
