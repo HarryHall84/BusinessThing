@@ -19,6 +19,7 @@
 		31DCADF22922D885001BC9CC /* BusinessThingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCADF12922D885001BC9CC /* BusinessThingTests.swift */; };
 		31DCADFC2922D885001BC9CC /* BusinessThingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCADFB2922D885001BC9CC /* BusinessThingUITests.swift */; };
 		31DCADFE2922D885001BC9CC /* BusinessThingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCADFD2922D885001BC9CC /* BusinessThingUITestsLaunchTests.swift */; };
+		4AE141B42926CC2E00DBBDCB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE141B32926CC2E00DBBDCB /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		31DCADF72922D885001BC9CC /* BusinessThingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusinessThingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DCADFB2922D885001BC9CC /* BusinessThingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessThingUITests.swift; sourceTree = "<group>"; };
 		31DCADFD2922D885001BC9CC /* BusinessThingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessThingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4AE141B32926CC2E00DBBDCB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				31DCADDC2922D884001BC9CC /* SceneDelegate.swift */,
 				31DCADDE2922D884001BC9CC /* ViewController.swift */,
 				31DCADE02922D884001BC9CC /* Main.storyboard */,
+				4AE141B32926CC2E00DBBDCB /* CustomCell.swift */,
 				31177E09292428EB0009C50F /* MissingAssignments.swift */,
 				31177E072924289B0009C50F /* Calendar.swift */,
 				31177E05292428860009C50F /* UpcomingAssignments.swift */,
@@ -272,6 +275,7 @@
 				31DCADDB2922D884001BC9CC /* AppDelegate.swift in Sources */,
 				31177E06292428860009C50F /* UpcomingAssignments.swift in Sources */,
 				31DCADDD2922D884001BC9CC /* SceneDelegate.swift in Sources */,
+				4AE141B42926CC2E00DBBDCB /* CustomCell.swift in Sources */,
 				31177E082924289B0009C50F /* Calendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

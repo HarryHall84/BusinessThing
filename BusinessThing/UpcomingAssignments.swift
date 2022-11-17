@@ -1,30 +1,23 @@
-//
-//  UpcomingAssignments.swift
-//  BusinessThing
-//
-//  Created by HARRISON HALL on 11/15/22.
-//
-
 import UIKit
-
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    
+    var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Performance", 100, "Dec 12")]
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     override func viewDidLoad() {
-        tableViewOutlet.dataSource = true
-        tableViewOutlet.delegate = true
+        tableViewOutlet.dataSource = self
+        tableViewOutlet.delegate = self
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        20
+        return basicSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "myCell")!
+        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
+        cell.dueOutlet.text = "Due \(basicSet[indexPath.row].2)"
+        cell.nameOutlet.text = "\(basicSet[indexPath.row].0)"
+        cell.pointsOutlet.text =  "\(basicSet[indexPath.row].1)"
         return cell
 
     }
