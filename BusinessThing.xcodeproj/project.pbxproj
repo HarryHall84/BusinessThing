@@ -10,6 +10,7 @@
 		31177E06292428860009C50F /* UpcomingAssignments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177E05292428860009C50F /* UpcomingAssignments.swift */; };
 		31177E082924289B0009C50F /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177E072924289B0009C50F /* Calendar.swift */; };
 		31177E0A292428EB0009C50F /* MissingAssignments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31177E09292428EB0009C50F /* MissingAssignments.swift */; };
+		316C55B12926D68300C82B3C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C55B02926D68300C82B3C /* TableViewCell.swift */; };
 		31DCADDB2922D884001BC9CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCADDA2922D884001BC9CC /* AppDelegate.swift */; };
 		31DCADDD2922D884001BC9CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCADDC2922D884001BC9CC /* SceneDelegate.swift */; };
 		31DCADDF2922D884001BC9CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCADDE2922D884001BC9CC /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		31177E05292428860009C50F /* UpcomingAssignments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingAssignments.swift; sourceTree = "<group>"; };
 		31177E072924289B0009C50F /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		31177E09292428EB0009C50F /* MissingAssignments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingAssignments.swift; sourceTree = "<group>"; };
+		316C55B02926D68300C82B3C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		31DCADD72922D884001BC9CC /* BusinessThing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusinessThing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DCADDA2922D884001BC9CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31DCADDC2922D884001BC9CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				31DCADDC2922D884001BC9CC /* SceneDelegate.swift */,
 				31DCADDE2922D884001BC9CC /* ViewController.swift */,
 				31DCADE02922D884001BC9CC /* Main.storyboard */,
+				316C55B02926D68300C82B3C /* TableViewCell.swift */,
 				4AE141B32926CC2E00DBBDCB /* CustomCell.swift */,
 				31177E09292428EB0009C50F /* MissingAssignments.swift */,
 				31177E072924289B0009C50F /* Calendar.swift */,
@@ -273,6 +276,7 @@
 				31DCADDF2922D884001BC9CC /* ViewController.swift in Sources */,
 				31177E0A292428EB0009C50F /* MissingAssignments.swift in Sources */,
 				31DCADDB2922D884001BC9CC /* AppDelegate.swift in Sources */,
+				316C55B12926D68300C82B3C /* TableViewCell.swift in Sources */,
 				31177E06292428860009C50F /* UpcomingAssignments.swift in Sources */,
 				31DCADDD2922D884001BC9CC /* SceneDelegate.swift in Sources */,
 				4AE141B42926CC2E00DBBDCB /* CustomCell.swift in Sources */,
