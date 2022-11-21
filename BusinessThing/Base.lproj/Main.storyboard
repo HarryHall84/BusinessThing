@@ -174,14 +174,15 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Missing Assignments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3c-sn-ous">
                                 <rect key="frame" x="16" y="47" width="358" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Aks-xa-6By"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U5I-sX-2Vi">
                                 <rect key="frame" x="20" y="142" width="374" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCellMissing" rowHeight="100" id="L44-Cu-lk5" customClass="TableViewCell" customModule="BusinessThing" customModuleProvider="target">
@@ -191,21 +192,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Assignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfN-qn-MkV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Assignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfN-qn-MkV">
                                                     <rect key="frame" x="20" y="18" width="181" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="181" id="8Pl-9E-2ke"/>
+                                                        <constraint firstAttribute="height" constant="21" id="G6O-dQ-cSB"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ak-L8-oQR">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ak-L8-oQR">
                                                     <rect key="frame" x="20" y="47" width="334" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="334" id="bjn-dw-46f"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XfN-qn-MkV" firstAttribute="leading" secondItem="Dc7-FV-rCl" secondAttribute="leadingMargin" id="M9x-Fi-nin"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5Ak-L8-oQR" secondAttribute="bottom" constant="10" id="SNf-8V-qNL"/>
+                                                <constraint firstItem="5Ak-L8-oQR" firstAttribute="top" secondItem="XfN-qn-MkV" secondAttribute="bottom" constant="8" id="bay-yJ-Pty"/>
+                                                <constraint firstItem="XfN-qn-MkV" firstAttribute="leading" secondItem="5Ak-L8-oQR" secondAttribute="leading" id="dBk-3l-JiY"/>
+                                                <constraint firstItem="XfN-qn-MkV" firstAttribute="top" secondItem="Dc7-FV-rCl" secondAttribute="topMargin" constant="7" id="jCQ-g5-Rbl"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="assignmentNameOutlet" destination="XfN-qn-MkV" id="2zP-7d-NGx"/>
@@ -217,6 +230,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hgb-60-5Vw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hgb-60-5Vw" firstAttribute="trailing" secondItem="z3c-sn-ous" secondAttribute="trailing" constant="40" id="0q6-Xc-fNT"/>
+                            <constraint firstItem="U5I-sX-2Vi" firstAttribute="leading" secondItem="QRp-Hy-3bR" secondAttribute="leadingMargin" id="V1V-2h-vtU"/>
+                            <constraint firstItem="U5I-sX-2Vi" firstAttribute="trailing" secondItem="QRp-Hy-3bR" secondAttribute="trailingMargin" id="Wi1-ad-0LY"/>
+                            <constraint firstItem="z3c-sn-ous" firstAttribute="leading" secondItem="hgb-60-5Vw" secondAttribute="leading" constant="16" id="XHh-Cg-MOo"/>
+                            <constraint firstItem="hgb-60-5Vw" firstAttribute="bottom" secondItem="U5I-sX-2Vi" secondAttribute="bottom" constant="118" id="ics-sc-ZjB"/>
+                            <constraint firstItem="U5I-sX-2Vi" firstAttribute="top" secondItem="z3c-sn-ous" secondAttribute="bottom" constant="45" id="kTs-LT-sqX"/>
+                            <constraint firstItem="z3c-sn-ous" firstAttribute="top" secondItem="QRp-Hy-3bR" secondAttribute="topMargin" constant="-1" id="wsb-nX-3sU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" title="Missing Work" image="exclamationmark.octagon.fill" catalog="system" id="0CL-ww-w4F"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
