@@ -7,10 +7,6 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        loginButton.isHidden = true
-        tabBarController?.tabBar.items?[1].isEnabled = true
-        tabBarController?.tabBar.items?[2].isEnabled = true
-        tabBarController?.tabBar.items?[3].isEnabled = true
     }
     @IBAction func Login(_ sender: Any)
     {

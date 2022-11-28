@@ -1,10 +1,3 @@
-//
-//  MissingAssignments.swift
-//  BusinessThing
-//
-//  Created by HARRISON HALL on 11/15/22.
-//
-
 import UIKit
 
 class MissingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource {
