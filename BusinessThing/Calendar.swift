@@ -10,6 +10,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     {
         vERYCoolOutlet.delegate = self
         vERYCoolOutlet.dataSource = self
+        manth.text = selectMonth(input: month)
         super.viewDidLoad()
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -22,10 +23,10 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         cell.EbicAwesimLabl.text = "0"
         return cell
     }
-    func selectMonth()
+    func selectMonth(input:Int) -> String
     {
         var mVar = ""
-        switch month
+        switch input
         {
         case 0:
             mVar = "January"
@@ -33,6 +34,26 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
             mVar = "Febuary"
         case 2:
             mVar = "March"
+        case 3:
+            mVar = "April"
+        case 4:
+            mVar = "May"
+        case 5:
+            mVar = "June"
+        case 6:
+            mVar = "July"
+        case 7:
+            mVar = "August"
+        case 8:
+            mVar = "September"
+        case 9:
+            mVar = "October"
+        case 10:
+            mVar = "November"
+        case 11:
+            mVar = "December"
+        default:
+            mVar = "Undefined"
         }
         return mVar
     }

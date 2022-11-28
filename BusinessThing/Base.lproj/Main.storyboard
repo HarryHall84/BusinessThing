@@ -179,18 +179,19 @@
                                 <rect key="frame" x="20" y="118" width="375" height="525"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.02488201617" green="0.10719559469999999" blue="0.1405645941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4FK-se-xUQ">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="4FK-se-xUQ">
                                     <size key="itemSize" width="53.600000000000001" height="61"/>
+                                    <size key="estimatedItemSize" width="53.600000000000001" height="61"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="eup-j2-7aV" customClass="CustomCollectionCell" customModule="BusinessThing" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zsc-bC-rB0">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="53.5" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyc-0D-nhV">
@@ -214,9 +215,9 @@
                                                 <constraint firstItem="Jyc-0D-nhV" firstAttribute="centerX" secondItem="Zsc-bC-rB0" secondAttribute="centerX" id="qIy-L8-FgD"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.08753316756" blue="0.2119241302" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.35208351717012337" green="0.37830219069999999" blue="0.23306603630127057" alpha="0.42705676015714289" colorSpace="custom" customColorSpace="displayP3"/>
                                         <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
-                                        <size key="customSize" width="50" height="100"/>
+                                        <size key="customSize" width="53.5" height="100"/>
                                         <connections>
                                             <outlet property="EbicAwesimLabl" destination="Jyc-0D-nhV" id="kyP-vE-Pde"/>
                                         </connections>
@@ -224,12 +225,14 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AQ-zF-mNy">
-                                <rect key="frame" x="151" y="56" width="113" height="46"/>
+                                <rect key="frame" x="20" y="56" width="374" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Month">
                                         <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="36" name="Didot-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
