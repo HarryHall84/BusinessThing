@@ -20,7 +20,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = vERYCoolOutlet.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCollectionCell
-        cell.EbicAwesimLabl.text = "0"
+        cell.EbicAwesimLabl.text = "\(indexPath.row + 1)"
         return cell
     }
     func selectMonth(input:Int) -> String

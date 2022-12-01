@@ -6,6 +6,10 @@ class ViewController: UIViewController
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad()
     {
+        tabBarController?.tabBar.items?[1].isEnabled = true
+        tabBarController?.tabBar.items?[2].isEnabled = true
+        tabBarController?.tabBar.items?[3].isEnabled = true
+
         super.viewDidLoad()
     }
     @IBAction func Login(_ sender: Any)
