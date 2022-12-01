@@ -3,4 +3,208 @@
    uuid = "F402C61D-BC55-471A-982B-D158E3DDBF73"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C4EFEF6-B5BC-467F-A844-650B1C2A856E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusinessThing/Calendar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5"
+            endingLineNumber = "5"
+            landmarkName = "Calendar"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5C4EFEF6-B5BC-467F-A844-650B1C2A856E - 5bed00d78aa85f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.Calendar.month.getter : Swift.Int"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/Calendar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "5C4EFEF6-B5BC-467F-A844-650B1C2A856E - 1db033c98cd1d1e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.Calendar.month.setter : Swift.Int"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/Calendar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "5C4EFEF6-B5BC-467F-A844-650B1C2A856E - a9e11ba48cb460f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.Calendar.month.modify : Swift.Int"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/Calendar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "5C4EFEF6-B5BC-467F-A844-650B1C2A856E - 2d4f2a83100e60e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.Calendar.month.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/Calendar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "5C4EFEF6-B5BC-467F-A844-650B1C2A856E - edf23830a14ea74a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.Calendar.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BusinessThing.Calendar"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/Calendar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "5C4EFEF6-B5BC-467F-A844-650B1C2A856E - 4f7a9419b7ff8420"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.Calendar.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BusinessThing.Calendar&gt;"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/Calendar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EAA664A3-3311-4A51-9BB2-DDED748BEEF8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusinessThing/Calendar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "4"
+            endingLineNumber = "4"
+            landmarkName = "Calendar"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "EAA664A3-3311-4A51-9BB2-DDED748BEEF8 - 443111ef89b0ecc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.Calendar.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BusinessThing.Calendar"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/Calendar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "EAA664A3-3311-4A51-9BB2-DDED748BEEF8 - edf23830a14ea74a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.Calendar.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BusinessThing.Calendar"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/Calendar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "EAA664A3-3311-4A51-9BB2-DDED748BEEF8 - 4e952039ceb8cb7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.Calendar.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BusinessThing.Calendar&gt;"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/Calendar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "EAA664A3-3311-4A51-9BB2-DDED748BEEF8 - 4f7a9419b7ff8420"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.Calendar.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BusinessThing.Calendar&gt;"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/Calendar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1BDFB5F6-B65C-4834-949C-494258327D82"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusinessThing/UpcomingAssignments.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
