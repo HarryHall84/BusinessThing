@@ -124,16 +124,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAr-88-IYU">
-                                <rect key="frame" x="361" y="151" width="20" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEC-WX-ntD">
+                                <rect key="frame" x="345" y="147" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <menu key="menu" id="t9c-y1-6JR">
+                                <menu key="menu" id="We8-Z9-sB4">
                                     <children>
-                                        <command title="Item 1" id="w1L-UF-iL4"/>
-                                        <command title="Item 2" id="WG8-NW-W47"/>
+                                        <command title="Date" id="GkL-FW-QXj"/>
+                                        <command title="Points" id="wIR-qg-lBO"/>
                                     </children>
                                 </menu>
-                                <state key="normal" image="dot.circle" catalog="system"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pullDownBtn:" destination="LFy-9r-hml" eventType="touchUpInside" id="ZvY-dT-ZOO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Qs-jV-wuH"/>
@@ -153,6 +156,7 @@
                     <tabBarItem key="tabBarItem" enabled="NO" title="New Assignments" image="arrow.up.doc.on.clipboard" catalog="system" id="4y5-m8-MYX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="sortBtn" destination="We8-Z9-sB4" id="5y8-62-0Rw"/>
                         <outlet property="tableViewOutlet" destination="EeL-D6-7ff" id="yit-D0-vhe"/>
                     </connections>
                 </viewController>
@@ -176,7 +180,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="CxJ-F9-dP2"/>
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Cq-qN-Y6i">
-                                <rect key="frame" x="19" y="117" width="375" height="525"/>
+                                <rect key="frame" x="16" y="115" width="377" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.02488201617" green="0.10719559469999999" blue="0.1405645941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="4FK-se-xUQ">
@@ -389,7 +393,6 @@
     <resources>
         <image name="arrow.up.doc.on.clipboard" catalog="system" width="116" height="128"/>
         <image name="calendar.badge.clock.rtl" catalog="system" width="128" height="108"/>
-        <image name="dot.circle" catalog="system" width="128" height="123"/>
         <image name="exclamationmark.octagon.fill" catalog="system" width="128" height="112"/>
         <image name="square.and.arrow.up.trianglebadge.exclamationmark" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">

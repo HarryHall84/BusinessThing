@@ -3,6 +3,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Performance", 100, "Dec 12")]
     @IBOutlet weak var tableViewOutlet: UITableView!
     
+    @IBOutlet weak var sortBtn: UIButton!
     override func viewDidLoad() {
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
@@ -20,6 +21,11 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         cell.pointsOutlet.text =  "\(basicSet[indexPath.row].1)"
         return cell
 
+    }
+    
+    
+    @IBAction func pullDownBtn(_ sender: UIButton) {
+        // wtf do we do here dog 
     }
     
     
