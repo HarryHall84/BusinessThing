@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKR-UB-2mj">
-                                <rect key="frame" x="136" y="84" width="119" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKR-UB-2mj">
+                                <rect key="frame" x="136" y="84" width="142" height="46"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Canvas">
                                         <attributes>
@@ -31,9 +30,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8B2-uN-Eud">
-                                <rect key="frame" x="162" y="633" width="66" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8B2-uN-Eud">
+                                <rect key="frame" x="162" y="633" width="90" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                 <connections>
@@ -43,6 +41,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dKR-UB-2mj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="3XR-OF-BUx"/>
+                            <constraint firstItem="8B2-uN-Eud" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="162" id="60m-Pu-uDU"/>
+                            <constraint firstItem="8B2-uN-Eud" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ER0-Ey-5zi"/>
+                            <constraint firstItem="dKR-UB-2mj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="Hkp-BU-wTA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8B2-uN-Eud" secondAttribute="bottom" constant="96" id="dRn-Me-nec"/>
+                            <constraint firstItem="dKR-UB-2mj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="siB-RI-iqz"/>
+                            <constraint firstItem="dKR-UB-2mj" firstAttribute="centerX" secondItem="8B2-uN-Eud" secondAttribute="centerX" id="xbW-LF-Mi4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sign-in" image="square.and.arrow.up.trianglebadge.exclamationmark" catalog="system" id="VGg-pM-5hb"/>
                     <navigationItem key="navigationItem" id="6js-22-Ia9"/>
@@ -124,9 +131,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEC-WX-ntD">
-                                <rect key="frame" x="345" y="147" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEC-WX-ntD">
+                                <rect key="frame" x="23" y="48" width="40" height="30"/>
                                 <menu key="menu" id="We8-Z9-sB4">
                                     <children>
                                         <command title="Date" id="GkL-FW-QXj"/>
@@ -134,20 +140,24 @@
                                     </children>
                                 </menu>
                                 <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="button.programmable" catalog="system"/>
                                 <connections>
-                                    <action selector="pullDownBtn:" destination="LFy-9r-hml" eventType="touchUpInside" id="ZvY-dT-ZOO"/>
+                                    <action selector="pullDownBtn:" destination="LFy-9r-hml" eventType="touchUpInside" id="jwM-3v-AvP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Qs-jV-wuH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="PEC-WX-ntD" firstAttribute="trailing" secondItem="EeL-D6-7ff" secondAttribute="trailing" constant="-328" id="EW4-7i-AV5"/>
                             <constraint firstItem="5i3-73-pCH" firstAttribute="centerX" secondItem="EeL-D6-7ff" secondAttribute="centerX" id="MrB-ca-7gE"/>
                             <constraint firstItem="5i3-73-pCH" firstAttribute="leading" secondItem="7Qs-jV-wuH" secondAttribute="leading" constant="28" id="Vgi-gU-51f"/>
                             <constraint firstItem="5i3-73-pCH" firstAttribute="top" secondItem="7Qs-jV-wuH" secondAttribute="top" id="dLt-Df-NFY"/>
                             <constraint firstItem="7Qs-jV-wuH" firstAttribute="trailing" secondItem="5i3-73-pCH" secondAttribute="trailing" constant="28" id="i2I-CX-QMW"/>
                             <constraint firstItem="EeL-D6-7ff" firstAttribute="leading" secondItem="7Qs-jV-wuH" secondAttribute="leading" constant="23" id="lrA-o1-kha"/>
                             <constraint firstItem="EeL-D6-7ff" firstAttribute="bottom" secondItem="7Qs-jV-wuH" secondAttribute="bottom" id="m5x-B2-yHG"/>
+                            <constraint firstItem="PEC-WX-ntD" firstAttribute="leading" secondItem="7Qs-jV-wuH" secondAttribute="leading" constant="23" id="oel-4D-Ui8"/>
+                            <constraint firstItem="PEC-WX-ntD" firstAttribute="top" secondItem="EeL-D6-7ff" secondAttribute="top" constant="-99" id="u5N-w2-hrW"/>
                             <constraint firstItem="7Qs-jV-wuH" firstAttribute="trailing" secondItem="EeL-D6-7ff" secondAttribute="trailing" constant="23" id="uOJ-10-sat"/>
                             <constraint firstItem="5i3-73-pCH" firstAttribute="centerX" secondItem="izr-8P-kdw" secondAttribute="centerX" id="vOB-Fn-4lm"/>
                             <constraint firstItem="EeL-D6-7ff" firstAttribute="top" secondItem="5i3-73-pCH" secondAttribute="bottom" constant="8" id="xp1-lF-5Cz"/>
@@ -192,7 +202,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="eup-j2-7aV" customClass="CustomCollectionCell" customModule="BusinessThing" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="53" height="110"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zsc-bC-rB0">
                                             <rect key="frame" x="0.0" y="0.0" width="53.5" height="110"/>
@@ -392,6 +402,7 @@
     </scenes>
     <resources>
         <image name="arrow.up.doc.on.clipboard" catalog="system" width="116" height="128"/>
+        <image name="button.programmable" catalog="system" width="128" height="123"/>
         <image name="calendar.badge.clock.rtl" catalog="system" width="128" height="108"/>
         <image name="exclamationmark.octagon.fill" catalog="system" width="128" height="112"/>
         <image name="square.and.arrow.up.trianglebadge.exclamationmark" catalog="system" width="128" height="128"/>

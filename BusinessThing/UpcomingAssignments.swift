@@ -2,11 +2,9 @@ import UIKit
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Performance", 100, "Dec 12")]
     @IBOutlet weak var tableViewOutlet: UITableView!
-    
-    
     @IBOutlet weak var sortBtn: UIButton!
-    
     override func viewDidLoad() {
+        pullDownBtn((Any).self)
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
         sortBtn.showsMenuAsPrimaryAction = true 
@@ -27,7 +25,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    @IBAction func pullDownBtn(_ sender: UIButton) {
+    @IBAction func pullDownBtn(_ sender: Any) {
         // wtf do we do here dog
         let date = UIAction(title: "Date", handler: { _ in print("Sewi")} )
         let points = UIAction(title: "Points", handler: { _ in print("YOOO")})
