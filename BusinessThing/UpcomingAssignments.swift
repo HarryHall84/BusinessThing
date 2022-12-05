@@ -25,7 +25,12 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     @IBAction func pullDownBtn(_ sender: UIButton) {
-        // wtf do we do here dog 
+        // wtf do we do here dog
+        let date = UIAction(title: "Date", handler: { _ in print("Sewi")} )
+        let points = UIAction(title: "Points", handler: { _ in print("YOOO")})
+        let menu = UIMenu(title: "Prioritize", children: [date, points])
+        sortBtn.menu = menu
+        
     }
     
     
