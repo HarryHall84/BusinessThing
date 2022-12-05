@@ -156,7 +156,7 @@
                     <tabBarItem key="tabBarItem" enabled="NO" title="New Assignments" image="arrow.up.doc.on.clipboard" catalog="system" id="4y5-m8-MYX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="sortBtn" destination="We8-Z9-sB4" id="5y8-62-0Rw"/>
+                        <outlet property="sortBtn" destination="PEC-WX-ntD" id="0vA-15-CGf"/>
                         <outlet property="tableViewOutlet" destination="EeL-D6-7ff" id="yit-D0-vhe"/>
                     </connections>
                 </viewController>

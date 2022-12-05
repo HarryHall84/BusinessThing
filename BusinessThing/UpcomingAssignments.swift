@@ -3,10 +3,13 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Performance", 100, "Dec 12")]
     @IBOutlet weak var tableViewOutlet: UITableView!
     
+    
     @IBOutlet weak var sortBtn: UIButton!
+    
     override func viewDidLoad() {
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
+        sortBtn.showsMenuAsPrimaryAction = true 
         super.viewDidLoad()
     }
     
