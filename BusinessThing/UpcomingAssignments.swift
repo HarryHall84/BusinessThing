@@ -7,7 +7,21 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
     override func viewDidLoad() {
-        pullDownBtn((Any).self)
+        let date = UIAction(title: "Date", handler: { _ in self.priDate = true
+            self.priPts = false
+            print(self.priDate)
+            print(self.priPts)
+        } )
+        let points = UIAction(title: "Points", handler: { _ in self.priPts = true
+            self.priDate = false
+            print(self.priDate)
+            print(self.priPts)
+            self.basicSet.sort(by: >)
+            print(self.basicSet)
+            self.tableViewOutlet.reloadData()
+        })
+        let menu = UIMenu(title: "Prioritize", children: [date, points])
+        sortBtn.menu = menu
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
         sortBtn.showsMenuAsPrimaryAction = true 
@@ -30,24 +44,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func pullDownBtn(_ sender: Any) {
         // wtf do we do here dog
-        let date = UIAction(title: "Date", handler: { _ in self.priDate = true
-            self.priPts = false
-            print(self.priDate)
-            print(self.priPts)
-            
-            
-        } )
-        let points = UIAction(title: "Points", handler: { _ in self.priPts = true
-            self.priDate = false
-            print(self.priDate)
-            print(self.priPts)
-            self.basicSet.sort(by: >)
-            print(self.basicSet)
-            self.tableViewOutlet.reloadData()
-            
-        })
-        let menu = UIMenu(title: "Prioritize", children: [date, points])
-        sortBtn.menu = menu
+        
         
                
                   
