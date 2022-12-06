@@ -1,18 +1,20 @@
 import UIKit
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Performance", 100, "Dec 12")]
+    var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Performance", 100, "Dec 12"), ("A1", 20, "Jan 3")]
     var priPts = false
-    var priDate = false
+    var priDate = true
     
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
     override func viewDidLoad() {
-        let date = UIAction(title: "Date", handler: { _ in self.priDate = true
+        let date = UIAction(title: "Date", handler: { _ in
+            self.priDate = true
             self.priPts = false
             print(self.priDate)
             print(self.priPts)
         } )
-        let points = UIAction(title: "Points", handler: { _ in self.priPts = true
+        let points = UIAction(title: "Points", handler: { _ in
+            self.priPts = true
             self.priDate = false
             print(self.priDate)
             print(self.priPts)
@@ -40,16 +42,24 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
 
     }
-    
-    
-    @IBAction func pullDownBtn(_ sender: Any) {
-        // wtf do we do here dog
-        
-        
-               
-                  
+    func sorter(input: [(String, Int, String)], juxtid: Int)
+    {
+        for i in input
+        {
+            switch juxtid
+            {
+            case 0:
+                i.0
+            case 1:
+                i.1
+            case 2:
+                i.2
+            default:
+                break;
             }
         }
+    }
+}
         
     
     
