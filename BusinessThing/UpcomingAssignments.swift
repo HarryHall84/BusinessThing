@@ -1,6 +1,9 @@
 import UIKit
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Performance", 100, "Dec 12")]
+    var priPts = false
+    var priDate = false
+    
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
     override func viewDidLoad() {
@@ -27,12 +30,31 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func pullDownBtn(_ sender: Any) {
         // wtf do we do here dog
-        let date = UIAction(title: "Date", handler: { _ in print("Sewi")} )
-        let points = UIAction(title: "Points", handler: { _ in print("YOOO")})
+        let date = UIAction(title: "Date", handler: { _ in self.priDate = true
+            self.priPts = false
+            print(self.priDate)
+            print(self.priPts)
+            
+            
+        } )
+        let points = UIAction(title: "Points", handler: { _ in self.priPts = true
+            self.priDate = false
+            print(self.priDate)
+            print(self.priPts)
+            self.basicSet.sort(by: >)
+            print(self.basicSet)
+            self.tableViewOutlet.reloadData()
+            
+        })
         let menu = UIMenu(title: "Prioritize", children: [date, points])
         sortBtn.menu = menu
         
-    }
+               
+                  
+            }
+        }
+        
+    
     
     
     /*
@@ -45,4 +67,4 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     }
     */
 
-}
+
