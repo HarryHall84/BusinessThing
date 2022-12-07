@@ -1,4 +1,5 @@
 import UIKit
+
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Performance", 100, "Dec 12"), ("A1", 20, "Jan 3")]
     var priPts = false
@@ -18,9 +19,12 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             self.priDate = false
             print(self.priDate)
             print(self.priPts)
-            self.basicSet.sort(by: >)
+//            self.basicSet.sort(by: >)
+//            print(self.basicSet)
+//            self.tableViewOutlet.reloadData()
+            self.sorter(juxtid: 1)
             print(self.basicSet)
-            self.tableViewOutlet.reloadData()
+
         })
         let menu = UIMenu(title: "Prioritize", children: [date, points])
         sortBtn.menu = menu
@@ -42,22 +46,33 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
 
     }
-    func sorter(input: [(String, Int, String)], juxtid: Int)
+    func sorter(juxtid: Int)
     {
-        for i in input
-        {
+//        for i in input
+//        {
             switch juxtid
             {
             case 0:
-                i.0
+                return
+             // var assignment = i.0
             case 1:
-                i.1
+              // var pts = i.1
+                for x in 0...basicSet.count - 1{
+                   // var temp = try?basicSet[x+1].1
+                    if basicSet[x].1 < basicSet[x + 1].1 {
+                        var temp = basicSet[x + 1]
+                        basicSet[x + 1] = basicSet[x]
+                        basicSet[x] = temp
+                    }
+                }
             case 2:
-                i.2
+                return
+             // var date = i.2
+              
             default:
                 break;
             }
-        }
+      //  }
     }
 }
         
