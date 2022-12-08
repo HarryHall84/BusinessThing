@@ -25,14 +25,13 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             self.sorter(juxtid: 1)
             print(self.basicSet)
             self.tableViewOutlet.reloadData()
-
-
         })
         let menu = UIMenu(title: "Prioritize", children: [date, points])
         sortBtn.menu = menu
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
-        sortBtn.showsMenuAsPrimaryAction = true 
+        sortBtn.showsMenuAsPrimaryAction = true
+        datea(input: basicSet[0].2)
         super.viewDidLoad()
     }
     
@@ -89,6 +88,42 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                 break;
             }
       //  }
+    }
+    func datea(input: String) -> (Int, Int)
+    {
+        var x = input.split(separator: " ")
+        var y: (Int, Int)
+        switch x[0].lowercased()
+        {
+        case "jan":
+            y.0 = 0
+        case "feb":
+            y.0 = 1
+        case "mar":
+            y.0 = 2
+        case "apr":
+            y.0 = 3
+        case "may":
+            y.0 = 4
+        case "jun":
+            y.0 = 5
+        case "jul":
+            y.0 = 6
+        case "aug":
+            y.0 = 7
+        case "sep":
+            y.0 = 8
+        case "oct":
+            y.0 = 9
+        case "nov":
+            y.0 = 10
+        case "dec":
+            y.0 = 11
+        default:
+            y.0 = -1
+        }
+        y.1 = Int(x[1])!
+        return y;
     }
 }
         
