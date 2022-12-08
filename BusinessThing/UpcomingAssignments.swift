@@ -31,7 +31,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
         sortBtn.showsMenuAsPrimaryAction = true
-        datea(input: basicSet[0].2)
+//        datea(input: basicSet[0].2)
         super.viewDidLoad()
     }
     
