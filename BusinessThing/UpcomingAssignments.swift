@@ -79,7 +79,15 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                 }
             case 2:
                 // date
-                
+                for x in 0...basicSet.count - 2 {
+                    var high = x
+                    for y in x + 1..< basicSet.count {
+                        if datea(input: basicSet[y].2).0 < datea(input: basicSet[high].1){
+                            high = y
+                        }
+                         
+                    }
+                }
                 
                 return
              // var date = i.2
@@ -97,6 +105,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         {
         case "jan":
             y.0 = 0
+            
         case "feb":
             y.0 = 1
         case "mar":
@@ -123,6 +132,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             y.0 = -1
         }
         y.1 = Int(x[1])!
+        
         return y;
     }
 }
