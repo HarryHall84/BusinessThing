@@ -1,7 +1,7 @@
 import UIKit
 
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Performance", 100, "Dec 12"), ("A1", 20, "Jan 3")]
+    var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Band Performance", 100, "Dec 12"), ("Physics Project", 40, "Jan 3")]
     var priPts = false
     var priDate = true
     
@@ -11,8 +11,9 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         let date = UIAction(title: "Date", handler: { _ in
             self.priDate = true
             self.priPts = false
-            print(self.priDate)
-            print(self.priPts)
+//            print(self.priDate)
+//            print(self.priPts)
+            self.sorter(juxtid: 2)
         } )
         let points = UIAction(title: "Points", handler: { _ in
             self.priPts = true
@@ -21,9 +22,10 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             print(self.priPts)
 //            self.basicSet.sort(by: >)
 //            print(self.basicSet)
-//            self.tableViewOutlet.reloadData()
             self.sorter(juxtid: 1)
             print(self.basicSet)
+            self.tableViewOutlet.reloadData()
+
 
         })
         let menu = UIMenu(title: "Prioritize", children: [date, points])
@@ -57,15 +59,29 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
              // var assignment = i.0
             case 1:
               // var pts = i.1
-                for x in 0...basicSet.count - 1{
-                   // var temp = try?basicSet[x+1].1
-                    if basicSet[x].1 < basicSet[x + 1].1 {
-                        var temp = basicSet[x + 1]
-                        basicSet[x + 1] = basicSet[x]
+                for x in 0...basicSet.count - 2{
+                     var high = x
+//                    if basicSet[x].1 < basicSet[x + 1].1 {
+//                        var temp = basicSet[x + 1]
+//                        basicSet[x + 1] = basicSet[x]
+//                        basicSet[x] = temp
+                    for y in x + 1 ..< basicSet.count {
+                        if basicSet[y].1 > basicSet[high].1 {
+                            high = y
+                        }
+                    }
+                    if x != high {
+                        // swap(&self.basicSet[x], &self.basicSet[low])
+                        var temp = basicSet[high]
+                        basicSet[high] = basicSet[x]
                         basicSet[x] = temp
                     }
+            
                 }
             case 2:
+                // date
+                
+                
                 return
              // var date = i.2
               
