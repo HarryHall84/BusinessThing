@@ -81,8 +81,8 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                 // date
                 for x in 0...basicSet.count - 2 {
                     var high = x
-                    for y in x + 1..< basicSet.count {
-                        if datea(input: basicSet[y].2).0 < datea(input: basicSet[high].1){
+                    for y in x + 1 ..< basicSet.count {
+                        if datea(input: basicSet[y].2).0 < datea(input: basicSet[high].2).0{
                             high = y
                         }
                          
