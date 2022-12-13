@@ -1,9 +1,10 @@
 import UIKit
 
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Band Performance", 100, "Dec 12"), ("Physics Project", 40, "Jan 3")]
+    var basicSet = [("English Assignment", 0, "Oct 5"), ("Math Assignment", 7, "Oct 7"), ("Band Performance", 100, "Dec 12"), ("Physics Project", 40, "Jan 3"), (("Physics Assignment", 1, "Dec 6"))]
     var priPts = false
     var priDate = true
+    var dayte = Date()
     
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
@@ -14,12 +15,11 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
 //            print(self.priDate)
 //            print(self.priPts)
             self.sorter(juxtid: 2)
+            self.tableViewOutlet.reloadData()
         } )
         let points = UIAction(title: "Points", handler: { _ in
             self.priPts = true
             self.priDate = false
-            print(self.priDate)
-            print(self.priPts)
 //            self.basicSet.sort(by: >)
 //            print(self.basicSet)
             self.sorter(juxtid: 1)
@@ -31,7 +31,6 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
         sortBtn.showsMenuAsPrimaryAction = true
-//        datea(input: basicSet[0].2)
         super.viewDidLoad()
     }
     
@@ -49,6 +48,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     }
     func sorter(juxtid: Int)
     {
+        var high = 0
 //        for i in input
 //        {
             switch juxtid
@@ -58,40 +58,44 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
              // var assignment = i.0
             case 1:
               // var pts = i.1
-                for x in 0...basicSet.count - 2{
-                     var high = x
-//                    if basicSet[x].1 < basicSet[x + 1].1 {
-//                        var temp = basicSet[x + 1]
-//                        basicSet[x + 1] = basicSet[x]
-//                        basicSet[x] = temp
-                    for y in x + 1 ..< basicSet.count {
-                        if basicSet[y].1 > basicSet[high].1 {
+                for x in 0...basicSet.count - 2
+                {
+                    high = x
+                    for y in x + 1 ..< basicSet.count
+                    {
+                        if basicSet[y].1 > basicSet[high].1
+                        {
                             high = y
                         }
                     }
-                    if x != high {
-                        // swap(&self.basicSet[x], &self.basicSet[low])
-                        var temp = basicSet[high]
+                    if x != high
+                    {
+                        let temp = basicSet[high]
                         basicSet[high] = basicSet[x]
                         basicSet[x] = temp
                     }
-            
                 }
             case 2:
                 // date
-                for x in 0...basicSet.count - 2 {
-                    var high = x
-                    for y in x + 1 ..< basicSet.count {
-                        if datea(input: basicSet[y].2).0 < datea(input: basicSet[high].2).0{
+                for x in 0...basicSet.count - 2
+                {
+                    high = x
+                    for y in x + 1 ..< basicSet.count
+                    {
+                        if datea(input: basicSet[y].2).0 < datea(input: basicSet[high].2).0
+                        {
                             high = y
                         }
-                         
+                    }
+                    if x != high
+                    {
+                        let temp = basicSet[high]
+                        basicSet[high] = basicSet[x]
+                        basicSet[x] = temp
                     }
                 }
-                
                 return
              // var date = i.2
-              
             default:
                 break;
             }
