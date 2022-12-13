@@ -1,6 +1,12 @@
 import UIKit
 
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    /*
+     String, Int, String
+     .0: Assignment Name
+     .1: Points Val.
+     .2: Due Date
+     */
     var basicSet = [("English Assignment", 0, "Oct 5"), ("AP Gov Project", 60, "Oct 2"), ("Math Assignment", 7, "Oct 7"), ("Band Performance", 100, "Dec 12"), ("Physics Project", 40, "Jan 3"), (("Physics Assignment", 1, "Dec 6"))]
     var priPts = false
     var priDate = true
@@ -48,68 +54,77 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     }
     func sorter(juxtid: Int)
     {
-        var high = 0
-//        for i in input
-//        {
-            switch juxtid
+        /*
+         Int, Int
+         .0: Month / Point Val.
+         .1: Day
+         */
+        var high: (Int, Int)
+        switch juxtid
+        {
+        case 0:
+        case 1:
+            for x in 0...basicSet.count - 2
             {
-            case 0:
-                return
-             // var assignment = i.0
-            case 1:
-              // var pts = i.1
-                for x in 0...basicSet.count - 2
+                high.0 = x
+                for y in x + 1 ..< basicSet.count
                 {
-                    high = x
-                    for y in x + 1 ..< basicSet.count
+                    if basicSet[y].1 > basicSet[high.0].1
                     {
-                        if basicSet[y].1 > basicSet[high].1
-                        {
-                            high = y
-                        }
-                    }
-                    if x != high
-                    {
-                        let temp = basicSet[high]
-                        basicSet[high] = basicSet[x]
-                        basicSet[x] = temp
+                        high.0 = y
                     }
                 }
-            case 2:
-                // date
-                for x in 0...basicSet.count - 2
+                if x != high
                 {
-                    high = x
-                    for y in x + 1 ..< basicSet.count
-                    {
-                        if datea(input: basicSet[y].2).0 < datea(input: basicSet[high].2).0
-                        {
-                            high = y
-                        }
-                    }
-                    if x != high
-                    {
-                        let temp = basicSet[high]
-                        basicSet[high] = basicSet[x]
-                        basicSet[x] = temp
-                    }
+                    let temp = basicSet[high.0]
+                    basicSet[high.0] = basicSet[x]
+                    basicSet[x] = temp
                 }
-                return
-             // var date = i.2
-            default:
-                break;
             }
-      //  }
+        case 2:
+            var count = 0
+            high.0 = 0
+            high.1 = 0
+            var prevMothDatea = (0, 0)
+            for x in basicSet
+            {
+
+                let monthDatea = datea(input: x.2)
+                if monthDatea.0 < prevMonthDatea.0 && count != 0
+                {
+                    let temp = basicSet[count]
+                    basicSet[count - 1] = basicSet[count]
+                    basicSet[count] = temp
+                }
+                else if monthDatea.0 == prevMothDatea.0 && count != 0
+                {
+                    if monthDatea.1 < prevMothDatea.1
+                    {
+                        let temp = basicSet[count]
+                        basicSet[count - 1] = basicSet[count]
+                        basicSet[count] = temp
+                    }
+                }
+                count += 1
+                prevMothDatea = monthDatea
+            }
+        default:
+            break;
+        }
     }
     func datea(input: String) -> (Int, Int)
     {
         var x = input.split(separator: " ")
+        /*
+         Int, Int
+         .0: Month
+         .1: Day
+         */
         var y: (Int, Int)
         switch x[0].lowercased()
         {
         case "jan":
             y.0 = 0
-            
         case "feb":
             y.0 = 1
         case "mar":
