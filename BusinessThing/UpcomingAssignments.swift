@@ -63,7 +63,9 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         switch juxtid
         {
         case 0:
+            return
         case 1:
+            // Points
             for x in 0...basicSet.count - 2
             {
                 high.0 = x
@@ -74,7 +76,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                         high.0 = y
                     }
                 }
-                if x != high
+                if x != high.0
                 {
                     let temp = basicSet[high.0]
                     basicSet[high.0] = basicSet[x]
@@ -82,6 +84,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                 }
             }
         case 2:
+            // Date
             var count = 0
             high.0 = 0
             high.1 = 0
@@ -90,7 +93,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             {
 
                 let monthDatea = datea(input: x.2)
-                if monthDatea.0 < prevMonthDatea.0 && count != 0
+                if monthDatea.0 < prevMothDatea.0 && count != 0
                 {
                     let temp = basicSet[count]
                     basicSet[count - 1] = basicSet[count]
