@@ -1,5 +1,5 @@
 import UIKit
-
+///Harrison smells like spoiled brussle sprouts
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
      /*
      String, Int, String
@@ -94,7 +94,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                 if monthDatea.0 < prevMonthDatea.0 && count != 0
                 {
                     let temp = basicSet[count]
-                    print(prevMothDatea)
+                    print(prevMonthDatea)
                     basicSet[count - 1] = basicSet[count]
                     basicSet[count] = temp
                     print(basicSet)
@@ -115,6 +115,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         default:
             break;
         }
+        
     }
     
     func datea(input: String) -> (Int, Int)
