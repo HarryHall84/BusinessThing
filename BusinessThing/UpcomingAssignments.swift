@@ -18,16 +18,13 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         let date = UIAction(title: "Date", handler: { _ in
             self.priDate = true
             self.priPts = false
-//            print(self.priDate)
-//            print(self.priPts)
             self.sorter(juxtid: 2)
             self.tableViewOutlet.reloadData()
+            //print(self.basicSet)
         } )
         let points = UIAction(title: "Points", handler: { _ in
             self.priPts = true
             self.priDate = false
-//            self.basicSet.sort(by: >)
-//            print(self.basicSet)
             self.sorter(juxtid: 1)
             print(self.basicSet)
             self.tableViewOutlet.reloadData()
@@ -65,6 +62,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         case 0:
             return
         case 1:
+            // Points
             for x in 0...basicSet.count - 2
             {
                 high.0 = x
@@ -83,6 +81,8 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                 }
             }
         case 2:
+            // Date
+            // broöooooooohgyazesxdghcgfhvuioujhvghcufxgdy
             var count = 0
             high.0 = 0
             high.1 = 0
@@ -94,8 +94,10 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                 if monthDatea.0 < prevMonthDatea.0 && count != 0
                 {
                     let temp = basicSet[count]
+                    print(prevMothDatea)
                     basicSet[count - 1] = basicSet[count]
                     basicSet[count] = temp
+                    print(basicSet)
                 }
                 else if monthDatea.0 == prevMonthDatea.0 && count != 0
                 {
@@ -109,10 +111,12 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                 count += 1
                 prevMonthDatea = monthDatea
             }
+            print(basicSet)
         default:
             break;
         }
     }
+    
     func datea(input: String) -> (Int, Int)
     {
         var x = input.split(separator: " ")
@@ -121,6 +125,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
          .0: Month
          .1: Day
          */
+        
         var y: (Int, Int)
         switch x[0].lowercased()
         {
@@ -152,7 +157,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             y.0 = -1
         }
         y.1 = Int(x[1])!
-        
+      //  print(y)
         return y;
     }
 }
