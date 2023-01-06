@@ -83,13 +83,17 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         case 2:
             // Date
             // broöooooooohgyazesxdghcgfhvuioujhvghcufxgdy
+            // me too ✊😔
+            /*
+             Also--- why on Earth is this code so convoluted? I thought we redid this to *reduce* convolution!
+             Sometimes it feels like the reason I use tuples is out of sheer contempt. I'm bordering on using
+             emojis for variable names at this point                                                        */
             var count = 0
             high.0 = 0
             high.1 = 0
             var prevMonthDatea = (0, 0)
             for x in basicSet
             {
-
                 let monthDatea = datea(input: x.2)
                 if monthDatea.0 < prevMonthDatea.0 && count != 0
                 {
