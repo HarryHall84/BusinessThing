@@ -84,36 +84,39 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             // Date
             // broöooooooohgyazesxdghcgfhvuioujhvghcufxgdy
             // me too ✊😔
-            /*
-             Also--- why on Earth is this code so convoluted? I thought we redid this to *reduce* convolution!
-             Sometimes it feels like the reason I use tuples is out of sheer contempt. I'm bordering on using
-             emojis for variable names at this point                                                        */
             var count = 0
+            var totalSort = 0
             high.0 = 0
             high.1 = 0
             var prevMonthDatea = (0, 0)
-            for x in basicSet
+            while totalSort != basicSet.count
             {
-                let monthDatea = datea(input: x.2)
-                if monthDatea.0 < prevMonthDatea.0 && count != 0
+                totalSort = 0
+                count = 0
+                for x in basicSet
                 {
-                    let temp = basicSet[count]
-                    print(prevMonthDatea)
-                    basicSet[count - 1] = basicSet[count]
-                    basicSet[count] = temp
-                    print(basicSet)
-                }
-                else if monthDatea.0 == prevMonthDatea.0 && count != 0
-                {
-                    if monthDatea.1 < prevMonthDatea.1
+                    let monthDatea = datea(input: x.2)
+                    if monthDatea.0 < prevMonthDatea.0 && count > 0
                     {
                         let temp = basicSet[count]
-                        basicSet[count - 1] = basicSet[count]
-                        basicSet[count] = temp
+                        basicSet[count] = basicSet[count - 1]
+                        basicSet[count - 1] = temp
+                        totalSort -= 1
                     }
+                    else if monthDatea.0 == prevMonthDatea.0 && count > 0
+                    {
+                        if monthDatea.1 < prevMonthDatea.1
+                        {
+                            let temp = basicSet[count]
+                            basicSet[count] = basicSet[count - 1]
+                            basicSet[count - 1] = temp
+                            totalSort -= 1
+                        }
+                    }
+                    count += 1
+                    totalSort += 1
+                    prevMonthDatea = monthDatea
                 }
-                count += 1
-                prevMonthDatea = monthDatea
             }
             print(basicSet)
         default:
