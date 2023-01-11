@@ -8,32 +8,29 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
      .2: Due Date
      */
     var basicSet = [("English Assignment", 0, "Oct 5"), ("AP Gov Project", 60, "Oct 2"), ("Math Assignment", 7, "Oct 7"), ("Band Performance", 100, "Dec 12"), ("Physics Project", 40, "Jan 3"), (("Physics Assignment", 1, "Dec 6"))]
-    var priPts = false
-    var priDate = true
     var dayte = Date()
     
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
     override func viewDidLoad() {
         let date = UIAction(title: "Date", handler: { _ in
-            self.priDate = true
-            self.priPts = false
             self.sorter(juxtid: 2)
             self.tableViewOutlet.reloadData()
-            //print(self.basicSet)
-        } )
+        })
         let points = UIAction(title: "Points", handler: { _ in
-            self.priPts = true
-            self.priDate = false
             self.sorter(juxtid: 1)
-            print(self.basicSet)
             self.tableViewOutlet.reloadData()
         })
-        let menu = UIMenu(title: "Prioritize", children: [date, points])
+        let weighted = UIAction(title: "Weighted", handler: { _ in
+            self.sorter(juxtid: 0)
+            self.tableViewOutlet.reloadData()
+        })
+        let menu = UIMenu(title: "Organize based on...", children: [date, points, weighted])
         sortBtn.menu = menu
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
         sortBtn.showsMenuAsPrimaryAction = true
+        sorter(juxtid: 2)
         super.viewDidLoad()
     }
     
@@ -51,15 +48,55 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     }
     func sorter(juxtid: Int)
     {
-         /*
-         Int, Int
-         .0: Month / Point Val.
-         .1: Day
-         */
         var high: (Int, Int)
+        /*
+        Int, Int
+        .0: Month / Point Val.
+        .1: Day
+        */
         switch juxtid
         {
         case 0:
+            // Weighted
+            /*
+             This one is a fiesty one indeed; In short, this sorts assignments by relative weight. Both their
+             point values and due date are factored together, assigning a made up "weight" of each assignment.
+             I think this could be a good way to get students to focus on upcoming assignments after finishing
+             any due assignments
+             */
+//            var count = 0
+//            var totalSort = 0
+//            var prevMonthDatea = (0, 0)
+//            while totalSort != basicSet.count
+//            {
+//                totalSort = 0
+//                count = 0
+//                for x in basicSet
+//                {
+//                    let monthDatea = datea(input: x.2)
+//                    if monthDatea.0 < prevMonthDatea.0 && count > 0
+//                    {
+//                        let temp = basicSet[count]
+//                        basicSet[count] = basicSet[count - 1]
+//                        basicSet[count - 1] = temp
+//                        totalSort -= 1
+//                    }
+//                    else if monthDatea.0 == prevMonthDatea.0 && count > 0
+//                    {
+//                        if monthDatea.1 < prevMonthDatea.1
+//                        {
+//                            let temp = basicSet[count]
+//                            basicSet[count] = basicSet[count - 1]
+//                            basicSet[count - 1] = temp
+//                            totalSort -= 1
+//                        }
+//                    }
+//                    count += 1
+//                    totalSort += 1
+//                    prevMonthDatea = monthDatea
+//                }
+//            }
+            // until I finish it, however, it will remain a date sorter.
             return
         case 1:
             // Points
@@ -86,8 +123,6 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             // me too ✊😔
             var count = 0
             var totalSort = 0
-            high.0 = 0
-            high.1 = 0
             var prevMonthDatea = (0, 0)
             while totalSort != basicSet.count
             {
@@ -118,22 +153,19 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                     prevMonthDatea = monthDatea
                 }
             }
-            print(basicSet)
         default:
             break;
         }
         
     }
-    
     func datea(input: String) -> (Int, Int)
     {
-        var x = input.split(separator: " ")
+        let x = input.split(separator: " ")
          /*
          Int, Int
          .0: Month
          .1: Day
          */
-        
         var y: (Int, Int)
         switch x[0].lowercased()
         {
@@ -165,8 +197,11 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             y.0 = -1
         }
         y.1 = Int(x[1])!
-      //  print(y)
         return y;
+    }
+    func dynamicWeights(input: (Int, Int))
+    {
+        
     }
 }
         
