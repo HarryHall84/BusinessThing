@@ -7,7 +7,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
      .1: Points Val.
      .2: Due Date
      */
-    var basicSet = [("English Assignment", 0, "Oct 5"), ("AP Gov Project", 60, "Oct 2"), ("Math Assignment", 7, "Oct 7"), ("Band Performance", 100, "Dec 12"), ("Physics Project", 40, "Jan 3"), (("Physics Assignment", 1, "Dec 6"))]
+    var basicSet = [("English Assignment", 0, "Oct 5"), ("AP Gov Project", 60, "Oct 2"), ("Math Assignment", 7, "Oct 7"), ("Band Performance", 100, "Dec 12"), ("Physics Project", 40, "Jan 3"), (("History Assignment", 1, "Dec 6"))]
     var priPts = false
     var priDate = true
     var dayte = Date()
@@ -20,7 +20,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             self.priPts = false
             self.sorter(juxtid: 2)
             self.tableViewOutlet.reloadData()
-            //print(self.basicSet)
+           // print(self.basicSet)
         } )
         let points = UIAction(title: "Points", handler: { _ in
             self.priPts = true
@@ -87,15 +87,17 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             high.0 = 0
             high.1 = 0
             var prevMothDatea = (0, 0)
+            
+            
             for x in basicSet
             {
 
                 let monthDatea = datea(input: x.2)
-                print(monthDatea)
-                print(prevMothDatea)
+               // print(monthDatea)
+               // print(prevMothDatea)
                 if monthDatea.0 < prevMothDatea.0
                 {
-                    let temp = basicSet[count]
+                    let temp = basicSet[count - 1]
                     print(prevMothDatea)
                     basicSet[count - 1] = basicSet[count]
                     basicSet[count] = temp
@@ -108,7 +110,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                         let temp = basicSet[count - 1]
                         basicSet[count - 1] = basicSet[count]
                        // print(basicSet)
-                        basicSet[count - 1] = temp
+                        basicSet[count] = temp
                         print(basicSet)
                     }
                 }
@@ -124,7 +126,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     
     func datea(input: String) -> (Int, Int)
     {
-        var x = input.split(separator: " ")
+        let x = input.split(separator: " ")
         /*
          Int, Int
          .0: Month
