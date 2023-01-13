@@ -38,9 +38,9 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     func refreshTable()
     {
+        dates = selectDates(input: month)
         globalCal = findAssignments(input: basicSet)
         manth.text = selectMonth(input: month)
-        dates = selectDates(input: month)
         vERYCoolOutlet.reloadData()
     }
     func findAssignments(input: [(String, Int, String)]) -> [Int]
@@ -81,6 +81,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         refreshTable()
     }
+    //MARK: SPECIFIC METHOODS
     func colorPicker(selection: Int) -> UIColor
     {
         var final = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
