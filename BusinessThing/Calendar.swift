@@ -4,6 +4,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
 {
     var basicSet = [("English Assignment", 0, "Oct 5"), ("AP Gov Project", 60, "Oct 2"), ("Math Assignment", 7, "Oct 7"), ("Band Performance", 100, "Dec 12"), ("Physics Project", 40, "Jan 3"), (("Physics Assignment", 1, "Dec 6"))]
     var month = 0
+    var dates = 31
     var globalCal = [Int]()
     @IBOutlet weak var manth: UILabel!
     @IBOutlet weak var tooCoolForScrool: UIScrollView!
@@ -13,12 +14,13 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         vERYCoolOutlet.delegate = self
         vERYCoolOutlet.dataSource = self
         manth.text = selectMonth(input: month)
+        dates = selectDates(input: month)
         globalCal = findAssignments(input: basicSet)
         super.viewDidLoad()
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 35
+        return dates
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
@@ -26,14 +28,25 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         cell.EbicAwesimLabl.text = "\(globalCal[indexPath.row])"
         if globalCal[indexPath.row] > 0
         {
-            cell.backgroundColor = colorPicker(selection: indexPath.row)
+            cell.backgroundColor = colorPicker(selection: globalCal[indexPath.row])
+        }
+        else
+        {
+            cell.backgroundColor = #colorLiteral(red: 0.3458527327, green: 0.3793551922, blue: 0.2133879066, alpha: 0.4270567602)
         }
         return cell
+    }
+    func refreshTable()
+    {
+        globalCal = findAssignments(input: basicSet)
+        manth.text = selectMonth(input: month)
+        dates = selectDates(input: month)
+        vERYCoolOutlet.reloadData()
     }
     func findAssignments(input: [(String, Int, String)]) -> [Int]
     {
         var total = [Int]()
-        for _ in 0...34
+        for _ in 0...dates
         {
             total.append(0)
         }
@@ -49,6 +62,24 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
             }
         }
         return total
+    }
+    @IBAction func back(_ sender: Any)
+    {
+        month -= 1
+        if month < 0
+        {
+            month = 11
+        }
+        refreshTable()
+    }
+    @IBAction func forward(_ sender: Any)
+    {
+        month += 1
+        if month > 11
+        {
+            month = 0
+        }
+        refreshTable()
     }
     func colorPicker(selection: Int) -> UIColor
     {
@@ -109,6 +140,40 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
             mVar = "December"
         default:
             mVar = "Undefined"
+        }
+        return mVar
+    }
+    func selectDates(input:Int) -> Int
+    {
+        var mVar = 0
+        switch input
+        {
+        case 0:
+            mVar = 31
+        case 1:
+            mVar = 27
+        case 2:
+            mVar = 31
+        case 3:
+            mVar = 30
+        case 4:
+            mVar = 31
+        case 5:
+            mVar = 30
+        case 6:
+            mVar = 31
+        case 7:
+            mVar = 31
+        case 8:
+            mVar = 30
+        case 9:
+            mVar = 31
+        case 10:
+            mVar = 30
+        case 11:
+            mVar = 31
+        default:
+            mVar = 0
         }
         return mVar
     }
