@@ -9,8 +9,11 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var manth: UILabel!
     @IBOutlet weak var tooCoolForScrool: UIScrollView!
     @IBOutlet weak var vERYCoolOutlet: UICollectionView!
+    
+    @IBOutlet weak var dateOutlet: UILabel!
     override func viewDidLoad()
     {
+        tooCoolForScrool.showsVerticalScrollIndicator = true
         vERYCoolOutlet.delegate = self
         vERYCoolOutlet.dataSource = self
         manth.text = selectMonth(input: month)
@@ -24,7 +27,9 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
+        
         let cell = vERYCoolOutlet.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCollectionCell
+        
         cell.EbicAwesimLabl.text = "\(globalCal[indexPath.row])"
         if globalCal[indexPath.row] > 0
         {
@@ -78,6 +83,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         if month > 11
         {
             month = 0
+            
         }
         refreshTable()
     }
