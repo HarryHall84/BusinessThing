@@ -13,7 +13,6 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var dateOutlet: UILabel!
     override func viewDidLoad()
     {
-        tooCoolForScrool.showsVerticalScrollIndicator = true
         vERYCoolOutlet.delegate = self
         vERYCoolOutlet.dataSource = self
         manth.text = selectMonth(input: month)
@@ -25,11 +24,16 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     {
         return dates
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+       // performSegue(withIdentifier: "CalRedirect", sender: nil)
+    
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         
         let cell = vERYCoolOutlet.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCollectionCell
-        
+        cell.cringeDates.text = "\(indexPath.row + 1)"
         cell.EbicAwesimLabl.text = "\(globalCal[indexPath.row])"
         if globalCal[indexPath.row] > 0
         {
@@ -225,5 +229,9 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         y.1 = Int(x[1])!
         return y;
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
 }
  
+

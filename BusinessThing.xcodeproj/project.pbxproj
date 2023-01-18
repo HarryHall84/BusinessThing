@@ -21,6 +21,7 @@
 		31DCADFC2922D885001BC9CC /* BusinessThingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCADFB2922D885001BC9CC /* BusinessThingUITests.swift */; };
 		31DCADFE2922D885001BC9CC /* BusinessThingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCADFD2922D885001BC9CC /* BusinessThingUITestsLaunchTests.swift */; };
 		4A525BF0292D634F00FD4A96 /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A525BEF292D634F00FD4A96 /* CustomCollectionCell.swift */; };
+		4AAD008229785533008B5E89 /* SeeAssignmentsFromCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD008129785533008B5E89 /* SeeAssignmentsFromCal.swift */; };
 		4AE141B42926CC2E00DBBDCB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE141B32926CC2E00DBBDCB /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		31DCADFB2922D885001BC9CC /* BusinessThingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessThingUITests.swift; sourceTree = "<group>"; };
 		31DCADFD2922D885001BC9CC /* BusinessThingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessThingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4A525BEF292D634F00FD4A96 /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
+		4AAD008129785533008B5E89 /* SeeAssignmentsFromCal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAssignmentsFromCal.swift; sourceTree = "<group>"; };
 		4AE141B32926CC2E00DBBDCB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,11 +117,12 @@
 				31DCADDC2922D884001BC9CC /* SceneDelegate.swift */,
 				31DCADDE2922D884001BC9CC /* ViewController.swift */,
 				31DCADE02922D884001BC9CC /* Main.storyboard */,
+				4AAD008129785533008B5E89 /* SeeAssignmentsFromCal.swift */,
 				4A525BEF292D634F00FD4A96 /* CustomCollectionCell.swift */,
+				31177E072924289B0009C50F /* Calendar.swift */,
 				316C55B02926D68300C82B3C /* TableViewCell.swift */,
 				4AE141B32926CC2E00DBBDCB /* CustomCell.swift */,
 				31177E09292428EB0009C50F /* MissingAssignments.swift */,
-				31177E072924289B0009C50F /* Calendar.swift */,
 				31177E05292428860009C50F /* UpcomingAssignments.swift */,
 				31DCADE32922D885001BC9CC /* Assets.xcassets */,
 				31DCADE52922D885001BC9CC /* LaunchScreen.storyboard */,
@@ -279,6 +282,7 @@
 				31DCADDF2922D884001BC9CC /* ViewController.swift in Sources */,
 				31177E0A292428EB0009C50F /* MissingAssignments.swift in Sources */,
 				31DCADDB2922D884001BC9CC /* AppDelegate.swift in Sources */,
+				4AAD008229785533008B5E89 /* SeeAssignmentsFromCal.swift in Sources */,
 				316C55B12926D68300C82B3C /* TableViewCell.swift in Sources */,
 				31177E06292428860009C50F /* UpcomingAssignments.swift in Sources */,
 				31DCADDD2922D884001BC9CC /* SceneDelegate.swift in Sources */,
