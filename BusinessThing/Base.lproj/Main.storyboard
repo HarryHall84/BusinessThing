@@ -192,13 +192,13 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" translatesAutoresizingMaskIntoConstraints="NO" id="eup-j2-7aV" customClass="CustomCollectionCell" customModule="BusinessThing" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" reuseIdentifier="CustomCell" translatesAutoresizingMaskIntoConstraints="NO" id="eup-j2-7aV" customClass="CustomCollectionCell" customModule="BusinessThing" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="125"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="45" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="15" translatesAutoresizingMaskIntoConstraints="NO" id="Jyc-0D-nhV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="15" translatesAutoresizingMaskIntoConstraints="NO" id="Jyc-0D-nhV">
                                                     <rect key="frame" x="5" y="26" width="34" height="73"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="0">
@@ -349,18 +349,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overdue" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BK4-Je-3cc">
+                                                    <rect key="frame" x="209" y="18" width="145" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="BK4-Je-3cc" firstAttribute="leading" secondItem="XfN-qn-MkV" secondAttribute="trailing" constant="8" id="B7Q-YO-EBp"/>
                                                 <constraint firstItem="XfN-qn-MkV" firstAttribute="leading" secondItem="Dc7-FV-rCl" secondAttribute="leadingMargin" id="M9x-Fi-nin"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="5Ak-L8-oQR" secondAttribute="bottom" constant="10" id="SNf-8V-qNL"/>
                                                 <constraint firstItem="5Ak-L8-oQR" firstAttribute="top" secondItem="XfN-qn-MkV" secondAttribute="bottom" constant="8" id="bay-yJ-Pty"/>
                                                 <constraint firstItem="XfN-qn-MkV" firstAttribute="leading" secondItem="5Ak-L8-oQR" secondAttribute="leading" id="dBk-3l-JiY"/>
+                                                <constraint firstItem="BK4-Je-3cc" firstAttribute="trailing" secondItem="5Ak-L8-oQR" secondAttribute="trailing" id="iEu-zd-ptc"/>
                                                 <constraint firstItem="XfN-qn-MkV" firstAttribute="top" secondItem="Dc7-FV-rCl" secondAttribute="topMargin" constant="7" id="jCQ-g5-Rbl"/>
+                                                <constraint firstItem="BK4-Je-3cc" firstAttribute="baseline" secondItem="XfN-qn-MkV" secondAttribute="baseline" id="nqG-aK-wpq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="assignmentNameOutlet" destination="XfN-qn-MkV" id="2zP-7d-NGx"/>
                                             <outlet property="numPointsOutlet" destination="5Ak-L8-oQR" id="EOb-id-fhn"/>
+                                            <outlet property="overdueOutlet" destination="BK4-Je-3cc" id="ikR-ho-voZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

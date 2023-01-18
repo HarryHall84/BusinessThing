@@ -1,5 +1,5 @@
 import UIKit
-///Harrison smells like spoiled brussle sprouts
+///Harrison smells of foul brussle sprouts, and his mother is a hampster!
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
      /*
      String, Int, String
@@ -7,9 +7,8 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
      .1: Points Val.
      .2: Due Date
      */
-    var basicSet = [("English Assignment", 0, "Oct 5"), ("AP Gov Project", 60, "Oct 2"), ("Math Assignment", 7, "Oct 7"), ("Band Performance", 100, "Dec 12"), ("Physics Project", 40, "Jan 3"), (("Physics Assignment", 1, "Dec 6"))]
-    var dayte = Date()
-    
+    var basicSet = [("English Assignment", 0, "Mar 5"), ("AP Gov Project", 60, "Apr 2"), ("Math Assignment", 7, "Feb 7"), ("Band Performance", 100, "Feb 12"), ("Physics Project", 40, "Jan 3"), (("Physics Assignment", 1, "May 6"))]
+    var overdue: [(String, Int, String)] = []
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
     override func viewDidLoad() {
@@ -31,20 +30,28 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         tableViewOutlet.delegate = self
         sortBtn.showsMenuAsPrimaryAction = true
         sorter(juxtid: 2)
+        var d = (Date.now.description.split(separator: " "))[0].split(separator: "-")
+        d.remove(at: 0)
+        for x in 0...basicSet.count
+        {
+            print(x)
+            let y = datea(input: basicSet[x].2)
+            if Int(d[0])! < y.0 && Int(d[1])! < y.1
+            {
+                break
+            }
+        }
         super.viewDidLoad()
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return basicSet.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
         cell.dueOutlet.text = "Due \(basicSet[indexPath.row].2)"
         cell.nameOutlet.text = "\(basicSet[indexPath.row].0)"
         cell.pointsOutlet.text =  "\(basicSet[indexPath.row].1)"
         return cell
-
     }
     func sorter(juxtid: Int)
     {
@@ -204,18 +211,3 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
 }
-        
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
