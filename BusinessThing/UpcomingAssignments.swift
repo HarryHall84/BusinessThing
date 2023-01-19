@@ -32,7 +32,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         sorter(juxtid: 2)
         var d = (Date.now.description.split(separator: " "))[0].split(separator: "-")
         d.remove(at: 0)
-        for x in 0...basicSet.count
+        for x in 0...basicSet.count - 1
         {
             print(x)
             let y = datea(input: basicSet[x].2)

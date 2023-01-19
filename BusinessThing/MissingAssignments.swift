@@ -9,7 +9,6 @@ class MissingAssignments: UIViewController, UITableViewDelegate, UITableViewData
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
