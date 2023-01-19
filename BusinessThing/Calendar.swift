@@ -230,7 +230,9 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         return y;
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        if segue.identifier == "CalRedirect" {
+            // Pass data here
+        }
     }
 }
  
