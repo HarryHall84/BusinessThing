@@ -3,6 +3,7 @@ import UIKit
 class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate
 {
     var basicSet = [("English Assignment", 0, "Oct 5"), ("AP Gov Project", 60, "Oct 2"), ("Math Assignment", 7, "Oct 7"), ("Band Performance", 100, "Dec 12"), ("Physics Project", 40, "Jan 3"), (("Physics Assignment", 1, "Dec 6"))]
+    var sent: [(String, Int, String)] = []
     var month = 0
     var dates = 31
     var globalCal = [Int]()
@@ -26,8 +27,8 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-       // performSegue(withIdentifier: "CalRedirect", sender: nil)
-    
+        sent = findAssignments(input: indexPath.row, compare: basicSet)
+        performSegue(withIdentifier: "CalRedirect", sender: nil)
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
@@ -71,6 +72,19 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
             }
         }
         return total
+    }
+    func findAssignments(input: Int, compare: [(String, Int, String)]) -> [(String, Int, String)]
+    {
+        var returnArray: [(String, Int, String)] = []
+        for x in compare
+        {
+            let a = datea(input: x.2)
+            if a.0 == month && a.1 == input + 1
+            {
+                returnArray.append(x)
+            }
+        }
+        return returnArray
     }
     @IBAction func back(_ sender: Any)
     {
@@ -229,9 +243,12 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         y.1 = Int(x[1])!
         return y;
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CalRedirect" {
-            // Pass data here
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "CalRedirect"
+        {
+            let destination = segue.destination as! SeeAssignmentsFromCal
+            destination.incoming = sent 
         }
     }
 }

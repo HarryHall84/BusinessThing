@@ -14,8 +14,8 @@
             filePath = "BusinessThing/Calendar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "6"
-            endingLineNumber = "6"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
             landmarkName = "Calendar"
             landmarkType = "3">
             <Locations>
@@ -200,41 +200,9 @@
             filePath = "BusinessThing/Calendar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "findAssignments(input:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7735EEA4-0C37-4872-BC83-1348D4E2B1D8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BusinessThing/Calendar.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "colorPicker(selection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1CE2685D-DA6A-4627-91DF-6D984B290071"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BusinessThing/Calendar.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "colorPicker(selection:)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "refreshTable()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -248,8 +216,8 @@
             filePath = "BusinessThing/Calendar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "selectMonth(input:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -283,6 +251,210 @@
             startingLineNumber = "22"
             endingLineNumber = "22"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "42B76442-F2DB-40E3-976B-3727B890F11D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusinessThing/Calendar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "findAssignments(input:compare:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E8736521-104C-4291-8FF6-51A6198A3BD4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusinessThing/SeeAssignmentsFromCal.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "SeeAssignmentsFromCal"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "E8736521-104C-4291-8FF6-51A6198A3BD4 - 74c27d01a4d67ba7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.SeeAssignmentsFromCal.incoming.getter : Swift.Array&lt;(Swift.String, Swift.Int, Swift.String)&gt;"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/SeeAssignmentsFromCal.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "E8736521-104C-4291-8FF6-51A6198A3BD4 - 5d5b444c20c7b793"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.SeeAssignmentsFromCal.incoming.setter : Swift.Array&lt;(Swift.String, Swift.Int, Swift.String)&gt;"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/SeeAssignmentsFromCal.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "E8736521-104C-4291-8FF6-51A6198A3BD4 - 30f664d1121718a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.SeeAssignmentsFromCal.incoming.modify : Swift.Array&lt;(Swift.String, Swift.Int, Swift.String)&gt;"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/SeeAssignmentsFromCal.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "E8736521-104C-4291-8FF6-51A6198A3BD4 - 703d2b6b9f892947"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.SeeAssignmentsFromCal.incoming.modify : Swift.Array&lt;(Swift.String, Swift.Int, Swift.String)&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/SeeAssignmentsFromCal.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "E8736521-104C-4291-8FF6-51A6198A3BD4 - ab1150cf3c11c543"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.SeeAssignmentsFromCal.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BusinessThing.SeeAssignmentsFromCal"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/SeeAssignmentsFromCal.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "E8736521-104C-4291-8FF6-51A6198A3BD4 - 3542083dff5b9e8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BusinessThing.SeeAssignmentsFromCal.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BusinessThing.SeeAssignmentsFromCal&gt;"
+                  moduleName = "BusinessThing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carl.show24/Documents/BusinessThing/BusinessThing/SeeAssignmentsFromCal.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E717EC3A-15EF-4AC0-9093-B59451BE9596"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusinessThing/SeeAssignmentsFromCal.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE834FA5-5052-491C-AF94-5F56C9C1BE3E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusinessThing/Calendar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "findAssignments(input:compare:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8E96FB0-8164-49E9-BF6B-6783CAA7B0EE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusinessThing/Calendar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89D01EB6-59A0-41B0-801A-B66CA6899097"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusinessThing/SeeAssignmentsFromCal.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FF3595C-E820-4239-9D62-A3986E4D426D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BusinessThing/SeeAssignmentsFromCal.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

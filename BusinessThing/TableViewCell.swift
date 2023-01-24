@@ -1,13 +1,6 @@
-//
-//  TableViewCell.swift
-//  BusinessThing
-//
-//  Created by HARRISON HALL on 11/17/22.
-//
-
 import UIKit
-
-class TableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell
+{
     @IBOutlet weak var assignmentNameOutlet: UILabel!
     @IBOutlet weak var numPointsOutlet: UILabel!
     @IBOutlet weak var overdueOutlet: UILabel!
