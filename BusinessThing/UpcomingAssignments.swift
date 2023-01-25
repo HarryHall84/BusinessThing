@@ -7,7 +7,6 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
      .1: Points Val.
      .2: Due Date
      */
-    var basicSet = [("English Assignment", 0, "Mar 5"), ("AP Gov Project", 60, "Apr 2"), ("Math Assignment", 7, "Feb 7"), ("Band Performance", 100, "Feb 12"), ("Physics Project", 40, "Jan 3"), (("Physics Assignment", 1, "May 6"))]
     var overdue: [(String, Int, String)] = []
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
@@ -32,26 +31,35 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         sorter(juxtid: 2)
         var d = (Date.now.description.split(separator: " "))[0].split(separator: "-")
         d.remove(at: 0)
-        for x in 0...basicSet.count - 1
+        for x in 0...ViewController.basicSet.count - 1
         {
-            print(x)
-            let y = datea(input: basicSet[x].2)
-            if Int(d[0])! < y.0 && Int(d[1])! < y.1
+            let y = datea(input: ViewController.basicSet[x].2)
+            if Int(d[0])! > y.0 && Int(d[1])! > y.1
             {
+                ViewController.missingSet.append(ViewController.basicSet[x])
+                ViewController.basicSet.remove(at: x)
                 break
             }
         }
         super.viewDidLoad()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return basicSet.count
+        return ViewController.basicSet.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
-        cell.dueOutlet.text = "Due \(basicSet[indexPath.row].2)"
-        cell.nameOutlet.text = "\(basicSet[indexPath.row].0)"
-        cell.pointsOutlet.text =  "\(basicSet[indexPath.row].1)"
+        cell.dueOutlet.text = "Due \(ViewController.basicSet[indexPath.row].2)"
+        cell.nameOutlet.text = "\(ViewController.basicSet[indexPath.row].0)"
+        cell.pointsOutlet.text =  "\(ViewController.basicSet[indexPath.row].1)"
         return cell
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            ViewController.basicSet.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
     }
     func sorter(juxtid: Int)
     {
@@ -107,21 +115,24 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             return
         case 1:
             // Points
-            for x in 0...basicSet.count - 2
+            if ViewController.basicSet.count > 2
             {
-                high.0 = x
-                for y in x + 1 ..< basicSet.count
+                for x in 0...ViewController.basicSet.count - 2
                 {
-                    if basicSet[y].1 > basicSet[high.0].1
+                    high.0 = x
+                    for y in x + 1 ..< ViewController.basicSet.count
                     {
-                        high.0 = y
+                        if ViewController.basicSet[y].1 > ViewController.basicSet[high.0].1
+                        {
+                            high.0 = y
+                        }
                     }
-                }
-                if x != high.0
-                {
-                    let temp = basicSet[high.0]
-                    basicSet[high.0] = basicSet[x]
-                    basicSet[x] = temp
+                    if x != high.0
+                    {
+                        let temp = ViewController.basicSet[high.0]
+                        ViewController.basicSet[high.0] = ViewController.basicSet[x]
+                        ViewController.basicSet[x] = temp
+                    }
                 }
             }
         case 2:
@@ -131,27 +142,27 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             var count = 0
             var totalSort = 0
             var prevMonthDatea = (0, 0)
-            while totalSort != basicSet.count
+            while totalSort != ViewController.basicSet.count
             {
                 totalSort = 0
                 count = 0
-                for x in basicSet
+                for x in ViewController.basicSet
                 {
                     let monthDatea = datea(input: x.2)
                     if monthDatea.0 < prevMonthDatea.0 && count > 0
                     {
-                        let temp = basicSet[count]
-                        basicSet[count] = basicSet[count - 1]
-                        basicSet[count - 1] = temp
+                        let temp = ViewController.basicSet[count]
+                        ViewController.basicSet[count] = ViewController.basicSet[count - 1]
+                        ViewController.basicSet[count - 1] = temp
                         totalSort -= 1
                     }
                     else if monthDatea.0 == prevMonthDatea.0 && count > 0
                     {
                         if monthDatea.1 < prevMonthDatea.1
                         {
-                            let temp = basicSet[count]
-                            basicSet[count] = basicSet[count - 1]
-                            basicSet[count - 1] = temp
+                            let temp = ViewController.basicSet[count]
+                            ViewController.basicSet[count] = ViewController.basicSet[count - 1]
+                            ViewController.basicSet[count - 1] = temp
                             totalSort -= 1
                         }
                     }

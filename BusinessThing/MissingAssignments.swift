@@ -2,9 +2,6 @@ import UIKit
 
 class MissingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableViewOutlet: UITableView!
- 
-    var basicSet = [("English Assignment", 0, "Sep 30"), ("Math Assignment", 7, "Nov 2"), ("Performance", 100, "Aug 7")]
-    
     override func viewDidLoad() {
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
@@ -12,13 +9,13 @@ class MissingAssignments: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return basicSet.count 
+        return ViewController.missingSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCellMissing", for: indexPath) as! TableViewCell
-        cell.assignmentNameOutlet.text = "\(basicSet[indexPath.row].0)"
-        cell.numPointsOutlet.text = "\(basicSet[indexPath.row].1)"
+        cell.assignmentNameOutlet.text = "\(ViewController.missingSet[indexPath.row].0)"
+        cell.numPointsOutlet.text = "\(ViewController.missingSet[indexPath.row].1)"
         return cell
     }
     func selectDates(input:Int) -> Int

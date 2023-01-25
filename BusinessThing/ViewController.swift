@@ -3,6 +3,8 @@ import UIKit
 class ViewController: UIViewController
 {
     var isLogged = false
+    static var basicSet = [("English Assignment", 0, "Mar 5"), ("AP Gov Project", 60, "Apr 2"), ("Math Assignment", 7, "Feb 7"), ("Band Performance", 100, "Feb 12"), ("Physics Project", 40, "Jan 3"), ("Physics Assignment", 1, "May 6"), ("Oral Practice", 5, "Mar 5")]
+    static var missingSet: [(String, Int, String)] = []
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad()
     {

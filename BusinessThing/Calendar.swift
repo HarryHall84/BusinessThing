@@ -2,7 +2,6 @@ import UIKit
 
 class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate
 {
-    var basicSet = [("English Assignment", 0, "Oct 5"), ("AP Gov Project", 60, "Oct 2"), ("Math Assignment", 7, "Oct 7"), ("Band Performance", 100, "Dec 12"), ("Physics Project", 40, "Jan 3"), (("Physics Assignment", 1, "Dec 6"))]
     var sent: [(String, Int, String)] = []
     var month = 0
     var dates = 31
@@ -18,7 +17,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         vERYCoolOutlet.dataSource = self
         manth.text = selectMonth(input: month)
         dates = selectDates(input: month)
-        globalCal = findAssignments(input: basicSet)
+        globalCal = findAssignments(input: ViewController.basicSet)
         super.viewDidLoad()
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -27,7 +26,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        sent = findAssignments(input: indexPath.row, compare: basicSet)
+        sent = findAssignments(input: indexPath.row, compare: ViewController.basicSet)
         performSegue(withIdentifier: "CalRedirect", sender: nil)
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
@@ -49,7 +48,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     func refreshTable()
     {
         dates = selectDates(input: month)
-        globalCal = findAssignments(input: basicSet)
+        globalCal = findAssignments(input: ViewController.basicSet)
         manth.text = selectMonth(input: month)
         vERYCoolOutlet.reloadData()
     }

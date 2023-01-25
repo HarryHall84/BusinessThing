@@ -68,21 +68,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Assignments" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5i3-73-pCH">
-                                <rect key="frame" x="28" y="48" width="358" height="91"/>
-                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EeL-D6-7ff">
-                                <rect key="frame" x="23" y="147" width="368" height="617"/>
+                                <rect key="frame" x="0.0" y="146" width="414" height="618"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="100" id="K3y-jc-Biw" customClass="CustomCell" customModule="BusinessThing" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="368" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" focusStyle="custom" rowHeight="100" id="K3y-jc-Biw" customClass="CustomCell" customModule="BusinessThing" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K3y-jc-Biw" id="ABl-Rd-Zz3">
-                                            <rect key="frame" x="0.0" y="0.0" width="368" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming! Due " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVf-P1-2Ct">
@@ -130,8 +124,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEC-WX-ntD">
-                                <rect key="frame" x="23" y="48" width="40" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEC-WX-ntD">
+                                <rect key="frame" x="333" y="48" width="61" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Ez5-tb-lYn"/>
+                                </constraints>
                                 <menu key="menu" id="We8-Z9-sB4">
                                     <children>
                                         <command title="Date" id="GkL-FW-QXj"/>
@@ -144,22 +141,27 @@
                                     <action selector="pullDownBtn:" destination="LFy-9r-hml" eventType="touchUpInside" id="jwM-3v-AvP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Assignments" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5i3-73-pCH">
+                                <rect key="frame" x="28" y="48" width="277" height="105"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Qs-jV-wuH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PEC-WX-ntD" firstAttribute="trailing" secondItem="EeL-D6-7ff" secondAttribute="trailing" constant="-328" id="EW4-7i-AV5"/>
-                            <constraint firstItem="5i3-73-pCH" firstAttribute="centerX" secondItem="EeL-D6-7ff" secondAttribute="centerX" id="MrB-ca-7gE"/>
-                            <constraint firstItem="5i3-73-pCH" firstAttribute="leading" secondItem="7Qs-jV-wuH" secondAttribute="leading" constant="28" id="Vgi-gU-51f"/>
-                            <constraint firstItem="5i3-73-pCH" firstAttribute="top" secondItem="7Qs-jV-wuH" secondAttribute="top" id="dLt-Df-NFY"/>
-                            <constraint firstItem="7Qs-jV-wuH" firstAttribute="trailing" secondItem="5i3-73-pCH" secondAttribute="trailing" constant="28" id="i2I-CX-QMW"/>
-                            <constraint firstItem="EeL-D6-7ff" firstAttribute="leading" secondItem="7Qs-jV-wuH" secondAttribute="leading" constant="23" id="lrA-o1-kha"/>
-                            <constraint firstItem="EeL-D6-7ff" firstAttribute="bottom" secondItem="7Qs-jV-wuH" secondAttribute="bottom" id="m5x-B2-yHG"/>
-                            <constraint firstItem="PEC-WX-ntD" firstAttribute="leading" secondItem="7Qs-jV-wuH" secondAttribute="leading" constant="23" id="oel-4D-Ui8"/>
-                            <constraint firstItem="PEC-WX-ntD" firstAttribute="top" secondItem="EeL-D6-7ff" secondAttribute="top" constant="-99" id="u5N-w2-hrW"/>
-                            <constraint firstItem="7Qs-jV-wuH" firstAttribute="trailing" secondItem="EeL-D6-7ff" secondAttribute="trailing" constant="23" id="uOJ-10-sat"/>
-                            <constraint firstItem="5i3-73-pCH" firstAttribute="centerX" secondItem="izr-8P-kdw" secondAttribute="centerX" id="vOB-Fn-4lm"/>
-                            <constraint firstItem="EeL-D6-7ff" firstAttribute="top" secondItem="5i3-73-pCH" secondAttribute="bottom" constant="8" id="xp1-lF-5Cz"/>
+                            <constraint firstItem="EeL-D6-7ff" firstAttribute="centerX" secondItem="5i3-73-pCH" secondAttribute="centerX" constant="40.5" id="BQp-wX-DJo"/>
+                            <constraint firstItem="EeL-D6-7ff" firstAttribute="bottom" secondItem="7Qs-jV-wuH" secondAttribute="bottom" id="Pei-8y-ndl"/>
+                            <constraint firstItem="5i3-73-pCH" firstAttribute="leading" secondItem="7Qs-jV-wuH" secondAttribute="leading" constant="28" id="YxL-MZ-Tre"/>
+                            <constraint firstItem="PEC-WX-ntD" firstAttribute="trailing" secondItem="izr-8P-kdw" secondAttribute="trailingMargin" id="ZWA-Ca-h2S"/>
+                            <constraint firstItem="EeL-D6-7ff" firstAttribute="centerX" secondItem="izr-8P-kdw" secondAttribute="centerX" id="apk-Ou-w1b"/>
+                            <constraint firstItem="5i3-73-pCH" firstAttribute="top" secondItem="7Qs-jV-wuH" secondAttribute="top" id="sMY-IQ-SmE"/>
+                            <constraint firstItem="EeL-D6-7ff" firstAttribute="top" secondItem="5i3-73-pCH" secondAttribute="bottom" constant="-7" id="uPH-FC-83x"/>
+                            <constraint firstItem="PEC-WX-ntD" firstAttribute="leading" secondItem="7Qs-jV-wuH" secondAttribute="leading" constant="333" id="yG9-aO-lJ4"/>
+                            <constraint firstItem="EeL-D6-7ff" firstAttribute="leading" secondItem="7Qs-jV-wuH" secondAttribute="leading" id="yQS-ZP-Ze9"/>
+                            <constraint firstItem="5i3-73-pCH" firstAttribute="bottom" secondItem="PEC-WX-ntD" secondAttribute="bottom" constant="15" id="ygP-lU-4ud"/>
+                            <constraint firstItem="5i3-73-pCH" firstAttribute="top" secondItem="PEC-WX-ntD" secondAttribute="top" id="ze8-bh-8m5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" title="New Assignments" image="arrow.up.doc.on.clipboard" catalog="system" id="4y5-m8-MYX"/>
@@ -307,6 +309,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Assignments to report!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UXS-LS-EnT">
+                                <rect key="frame" x="20" y="110" width="374" height="97"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YN-69-9BT">
                                 <rect key="frame" x="0.0" y="71" width="414" height="31"/>
                                 <constraints>
@@ -357,13 +366,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Assignments to report!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UXS-LS-EnT">
-                                <rect key="frame" x="20" y="110" width="374" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X8k-Gs-xcE"/>
                         <color key="backgroundColor" red="0.94245328608247425" green="0.60019630911836097" blue="0.60398235302582248" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -374,6 +376,7 @@
                             <constraint firstItem="cix-F5-Ery" firstAttribute="trailing" secondItem="gk9-Gg-4GG" secondAttribute="trailingMargin" id="RF7-3p-2m6"/>
                             <constraint firstItem="cix-F5-Ery" firstAttribute="bottom" secondItem="X8k-Gs-xcE" secondAttribute="bottom" constant="-34" id="egj-iI-QI0"/>
                             <constraint firstItem="cix-F5-Ery" firstAttribute="leading" secondItem="gk9-Gg-4GG" secondAttribute="leadingMargin" id="fUD-LL-cvg"/>
+                            <constraint firstItem="UXS-LS-EnT" firstAttribute="top" secondItem="3YN-69-9BT" secondAttribute="bottom" constant="8" symbolic="YES" id="kUT-tb-WCG"/>
                             <constraint firstItem="cix-F5-Ery" firstAttribute="top" secondItem="3YN-69-9BT" secondAttribute="bottom" constant="58" id="vhJ-N9-o7d"/>
                         </constraints>
                     </view>
