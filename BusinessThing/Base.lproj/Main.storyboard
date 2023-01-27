@@ -17,18 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKR-UB-2mj">
-                                <rect key="frame" x="136" y="84" width="142" height="46"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Canvas">
-                                        <attributes>
-                                            <font key="NSFont" size="36" name="Didot-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8B2-uN-Eud">
                                 <rect key="frame" x="162" y="633" width="90" height="35"/>
                                 <state key="normal" title="Button"/>
@@ -37,17 +25,22 @@
                                     <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p8h-Zh-75A"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="IDn-MB-ek7">
+                                <rect key="frame" x="20" y="121" width="374" height="404"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="404" id="X5j-FY-fXI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dKR-UB-2mj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="3XR-OF-BUx"/>
                             <constraint firstItem="8B2-uN-Eud" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="162" id="60m-Pu-uDU"/>
+                            <constraint firstItem="IDn-MB-ek7" firstAttribute="centerX" secondItem="8B2-uN-Eud" secondAttribute="centerX" id="Dso-IA-CF6"/>
                             <constraint firstItem="8B2-uN-Eud" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ER0-Ey-5zi"/>
-                            <constraint firstItem="dKR-UB-2mj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="Hkp-BU-wTA"/>
+                            <constraint firstItem="IDn-MB-ek7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="JFO-Tk-Vwu"/>
+                            <constraint firstItem="IDn-MB-ek7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="avn-5c-TEG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8B2-uN-Eud" secondAttribute="bottom" constant="96" id="dRn-Me-nec"/>
-                            <constraint firstItem="dKR-UB-2mj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="siB-RI-iqz"/>
-                            <constraint firstItem="dKR-UB-2mj" firstAttribute="centerX" secondItem="8B2-uN-Eud" secondAttribute="centerX" id="xbW-LF-Mi4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sign-in" image="square.and.arrow.up.trianglebadge.exclamationmark" catalog="system" id="VGg-pM-5hb"/>
@@ -58,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="323"/>
+            <point key="canvasLocation" x="1766.6666666666667" y="322.76785714285711"/>
         </scene>
         <!--New Assignments-->
         <scene sceneID="aEE-N2-8Py">
@@ -524,6 +517,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="appLogo" width="1284" height="772"/>
         <image name="arrow.up.doc.on.clipboard" catalog="system" width="116" height="128"/>
         <image name="arrowshape.backward" catalog="system" width="128" height="104"/>
         <image name="arrowshape.forward" catalog="system" width="128" height="104"/>
