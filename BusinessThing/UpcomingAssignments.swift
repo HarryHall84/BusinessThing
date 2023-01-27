@@ -1,5 +1,4 @@
 import UIKit
-///Harrison smells of foul brussle sprouts, and his mother is a hampster!
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
      /*
      String, Int, String
@@ -54,11 +53,10 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+        if editingStyle == .delete
+        {
             ViewController.basicSet.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
     func sorter(juxtid: Int)
@@ -74,7 +72,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         case 0:
             // Weighted
             /*
-             This one is a fiesty one indeed; In short, this sorts assignments by relative weight. Both their
+             This one here is a fiesty one indeed; In short, this sorts assignments by relative weight. Both their
              point values and due date are factored together, assigning a made up "weight" of each assignment.
              I think this could be a good way to get students to focus on upcoming assignments after finishing
              any due assignments

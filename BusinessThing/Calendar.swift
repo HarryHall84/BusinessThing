@@ -17,7 +17,8 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         vERYCoolOutlet.dataSource = self
         manth.text = selectMonth(input: month)
         dates = selectDates(input: month)
-        globalCal = findAssignments(input: ViewController.basicSet)
+        let basicSet = ViewController.basicSet + ViewController.missingSet
+        globalCal = findAssignments(input: basicSet)
         super.viewDidLoad()
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -26,7 +27,8 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        sent = findAssignments(input: indexPath.row, compare: ViewController.basicSet)
+        let basicSet = ViewController.basicSet + ViewController.missingSet
+        sent = findAssignments(input: indexPath.row, compare: basicSet)
         performSegue(withIdentifier: "CalRedirect", sender: nil)
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
@@ -48,7 +50,8 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     func refreshTable()
     {
         dates = selectDates(input: month)
-        globalCal = findAssignments(input: ViewController.basicSet)
+        let basicSet = ViewController.basicSet + ViewController.missingSet
+        globalCal = findAssignments(input: basicSet)
         manth.text = selectMonth(input: month)
         vERYCoolOutlet.reloadData()
     }

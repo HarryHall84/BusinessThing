@@ -18,6 +18,13 @@ class MissingAssignments: UIViewController, UITableViewDelegate, UITableViewData
         cell.numPointsOutlet.text = "\(ViewController.missingSet[indexPath.row].1)"
         return cell
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete
+        {
+            ViewController.missingSet.remove(at: indexPath.row)
+            tableViewOutlet.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     func selectDates(input:Int) -> Int
     {
         var mVar = 0
