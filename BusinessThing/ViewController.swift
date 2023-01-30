@@ -6,11 +6,13 @@ class ViewController: UIViewController
     static var basicSet = [("English Assignment", 0, "Mar 5"), ("AP Gov Project", 60, "Apr 2"), ("Math Assignment", 7, "Feb 7"), ("Band Performance", 100, "Feb 12"), ("Physics Project", 40, "Jan 3"), ("Physics Assignment", 1, "May 6"), ("Oral Practice", 5, "Mar 5")]
     static var missingSet: [(String, Int, String)] = []
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var welcomeMessage: UILabel!
     override func viewDidLoad()
     {
-        tabBarController?.tabBar.items?[1].isEnabled = true
-        tabBarController?.tabBar.items?[2].isEnabled = true
-        tabBarController?.tabBar.items?[3].isEnabled = true
+        welcomeMessage.isHidden = true
+        tabBarController?.tabBar.items?[1].isEnabled = false
+        tabBarController?.tabBar.items?[2].isEnabled = false
+        tabBarController?.tabBar.items?[3].isEnabled = false
 
         super.viewDidLoad()
     }
@@ -40,9 +42,13 @@ class ViewController: UIViewController
         if(isLogged)
         {
             loginButton.isHidden = true
+            welcomeMessage.isHidden = false
             tabBarController?.tabBar.items?[1].isEnabled = true
             tabBarController?.tabBar.items?[2].isEnabled = true
             tabBarController?.tabBar.items?[3].isEnabled = true
+            
+            
+            
         }
     }
 }

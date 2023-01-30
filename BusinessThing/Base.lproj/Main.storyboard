@@ -31,6 +31,13 @@
                                     <constraint firstAttribute="height" constant="404" id="X5j-FY-fXI"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Know More!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-TI-dSc">
+                                <rect key="frame" x="20" y="640" width="374" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -47,6 +54,8 @@
                     <navigationItem key="navigationItem" id="6js-22-Ia9"/>
                     <connections>
                         <outlet property="loginButton" destination="8B2-uN-Eud" id="olz-lR-MfC"/>
+                        <outlet property="welcomeMessage" destination="cLk-TI-dSc" id="lws-Nu-SbM"/>
+                        <segue destination="LFy-9r-hml" kind="show" identifier="toDoAssignments" id="hB8-CU-uuH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -158,6 +167,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" title="New Assignments" image="arrow.up.doc.on.clipboard" catalog="system" id="4y5-m8-MYX"/>
+                    <navigationItem key="navigationItem" id="gdS-Ff-eOe"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="sortBtn" destination="PEC-WX-ntD" id="0vA-15-CGf"/>
@@ -516,6 +526,9 @@
             <point key="canvasLocation" x="1064" y="323"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hB8-CU-uuH"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="appLogo" width="1284" height="772"/>
         <image name="arrow.up.doc.on.clipboard" catalog="system" width="116" height="128"/>
