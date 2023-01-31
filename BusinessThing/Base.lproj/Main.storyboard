@@ -40,7 +40,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1267710544" green="0.76871567959999998" blue="0.43881278779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="8B2-uN-Eud" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="162" id="60m-Pu-uDU"/>
                             <constraint firstItem="IDn-MB-ek7" firstAttribute="centerX" secondItem="8B2-uN-Eud" secondAttribute="centerX" id="Dso-IA-CF6"/>
@@ -72,7 +72,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EeL-D6-7ff">
                                 <rect key="frame" x="0.0" y="146" width="414" height="618"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.1267710544" green="0.76871567959999998" blue="0.43881278779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" focusStyle="custom" rowHeight="100" id="K3y-jc-Biw" customClass="CustomCell" customModule="BusinessThing" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="100"/>
@@ -118,6 +118,7 @@
                                                 <constraint firstItem="6QD-ld-cgD" firstAttribute="top" secondItem="NVf-P1-2Ct" secondAttribute="bottom" constant="8" id="tVS-YJ-qIl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.1267710544" green="0.76871567959999998" blue="0.43881278779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="dueOutlet" destination="NVf-P1-2Ct" id="hwU-Ce-6Uf"/>
                                             <outlet property="nameOutlet" destination="6QD-ld-cgD" id="6z0-aD-aIh"/>
@@ -151,7 +152,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Qs-jV-wuH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.12677105437308647" green="0.76871567964553833" blue="0.43881278781433974" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="EeL-D6-7ff" firstAttribute="centerX" secondItem="5i3-73-pCH" secondAttribute="centerX" constant="40.5" id="BQp-wX-DJo"/>
                             <constraint firstItem="EeL-D6-7ff" firstAttribute="bottom" secondItem="7Qs-jV-wuH" secondAttribute="bottom" id="Pei-8y-ndl"/>
@@ -276,7 +277,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eko-zq-a5a"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1267710544" green="0.76871567959999998" blue="0.43881278779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="eko-zq-a5a" firstAttribute="trailing" secondItem="2AQ-zF-mNy" secondAttribute="trailing" constant="20" id="46C-6W-pN8"/>
                             <constraint firstItem="5Cq-qN-Y6i" firstAttribute="top" secondItem="sf5-VL-Hjr" secondAttribute="bottom" constant="22" id="DVk-5p-VDw"/>
@@ -412,7 +413,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U5I-sX-2Vi">
                                 <rect key="frame" x="20" y="142" width="374" height="504"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.1267710544" green="0.76871567959999998" blue="0.43881278779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCellMissing" rowHeight="100" id="L44-Cu-lk5" customClass="TableViewCell" customModule="BusinessThing" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="374" height="100"/>
@@ -433,6 +434,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ak-L8-oQR">
                                                     <rect key="frame" x="20" y="47" width="334" height="32"/>
+                                                    <color key="backgroundColor" red="0.1267710544" green="0.76871567959999998" blue="0.43881278779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="334" id="bjn-dw-46f"/>
                                                     </constraints>
@@ -449,6 +451,7 @@
                                                 <constraint firstItem="XfN-qn-MkV" firstAttribute="top" secondItem="Dc7-FV-rCl" secondAttribute="topMargin" constant="7" id="jCQ-g5-Rbl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.1267710544" green="0.76871567959999998" blue="0.43881278779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="assignmentNameOutlet" destination="XfN-qn-MkV" id="2zP-7d-NGx"/>
                                             <outlet property="numPointsOutlet" destination="5Ak-L8-oQR" id="EOb-id-fhn"/>
@@ -458,7 +461,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hgb-60-5Vw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1267710544" green="0.76871567959999998" blue="0.43881278779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="hgb-60-5Vw" firstAttribute="trailing" secondItem="z3c-sn-ous" secondAttribute="trailing" constant="40" id="0q6-Xc-fNT"/>
                             <constraint firstItem="U5I-sX-2Vi" firstAttribute="leading" secondItem="QRp-Hy-3bR" secondAttribute="leadingMargin" id="V1V-2h-vtU"/>
@@ -511,7 +514,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CgC-I1-iey">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
@@ -527,7 +530,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hB8-CU-uuH"/>
+        <segue reference="UFY-TO-nOV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="appLogo" width="1284" height="772"/>
@@ -539,9 +542,6 @@
         <image name="exclamationmark.octagon.fill" catalog="system" width="128" height="112"/>
         <image name="square.and.arrow.up.trianglebadge.exclamationmark" catalog="system" width="128" height="128"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>

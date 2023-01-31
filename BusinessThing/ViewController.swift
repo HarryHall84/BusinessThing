@@ -31,6 +31,10 @@ class ViewController: UIViewController
             if(name == "debugDan" && pass == "123")
             {
                 self.isLogged = true
+            } else {
+                let loginFail = UIAlertController(title: "Your username or password is incorrect. Please try again", message: "", preferredStyle: .alert)
+                loginFail.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(loginFail, animated: true, completion: nil)
             }
             self.updateAll()
         }))
@@ -46,7 +50,7 @@ class ViewController: UIViewController
             tabBarController?.tabBar.items?[1].isEnabled = true
             tabBarController?.tabBar.items?[2].isEnabled = true
             tabBarController?.tabBar.items?[3].isEnabled = true
-            
+            self.tabBarController?.selectedIndex = 1
             
             
         }
