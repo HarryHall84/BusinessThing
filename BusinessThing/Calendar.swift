@@ -178,7 +178,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         case 0:
             mVar = 31
         case 1:
-            mVar = 27
+            mVar = 28
         case 2:
             mVar = 31
         case 3:
