@@ -29,7 +29,10 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     {
         let basicSet = ViewController.basicSet + ViewController.missingSet
         sent = findAssignments(input: indexPath.row, compare: basicSet)
-        performSegue(withIdentifier: "CalRedirect", sender: nil)
+        if sent.isEmpty == false
+        {
+            performSegue(withIdentifier: "CalRedirect", sender: nil)
+        }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {

@@ -6,7 +6,6 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
      .1: Points Val.
      .2: Due Date
      */
-    var overdue: [(String, Int, String)] = []
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
     override func viewDidLoad() {
@@ -28,17 +27,15 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         tableViewOutlet.delegate = self
         sortBtn.showsMenuAsPrimaryAction = true
         sorter(juxtid: 2)
+        print(ViewController.basicSet)
         var d = (Date.now.description.split(separator: " "))[0].split(separator: "-")
         d.remove(at: 0)
-        for x in 0...ViewController.basicSet.count - 1
+        var inp = datea(input: ViewController.basicSet[0].2)
+        while(inp.0 < Int(d[0])! && inp.1 < Int(d[1])!)
         {
-            let y = datea(input: ViewController.basicSet[x].2)
-            if Int(d[0])! > y.0 && Int(d[1])! > y.1
-            {
-                ViewController.missingSet.append(ViewController.basicSet[x])
-                ViewController.basicSet.remove(at: x)
-                break
-            }
+            ViewController.missingSet.append(ViewController.basicSet[0])
+            ViewController.basicSet.remove(at: 0)
+            inp = datea(input: ViewController.basicSet[0].2)
         }
         super.viewDidLoad()
     }

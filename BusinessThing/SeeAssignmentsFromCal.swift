@@ -33,10 +33,10 @@ class SeeAssignmentsFromCal: UIViewController, UITableViewDelegate, UITableViewD
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! SeeCalCustomCell
+        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
         let row = indexPath.row
-        cell.pointsOutlet.text = String(incoming[row].1)
-        cell.assignmentName.text = incoming[row].0
+        cell.calPointsOutlet.text = String(incoming[row].1)
+        cell.calNameOutlet.text = incoming[row].0
         return cell
     }
 }

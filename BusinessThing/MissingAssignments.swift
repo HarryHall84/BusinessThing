@@ -13,9 +13,9 @@ class MissingAssignments: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCellMissing", for: indexPath) as! TableViewCell
-        cell.assignmentNameOutlet.text = "\(ViewController.missingSet[indexPath.row].0)"
-        cell.numPointsOutlet.text = "\(ViewController.missingSet[indexPath.row].1)"
+        let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCellMissing", for: indexPath) as! CustomCell
+        cell.missNameOutlet.text = "\(ViewController.missingSet[indexPath.row].0)"
+        cell.missPointsOutlet.text = "\(ViewController.missingSet[indexPath.row].1)"
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
