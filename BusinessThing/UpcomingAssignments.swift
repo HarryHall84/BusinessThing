@@ -35,7 +35,14 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         {
             ViewController.missingSet.append(ViewController.basicSet[0])
             ViewController.basicSet.remove(at: 0)
-            inp = datea(input: ViewController.basicSet[0].2)
+            if ViewController.basicSet.isEmpty
+            {
+                break
+            }
+            else
+            {
+                inp = datea(input: ViewController.basicSet[0].2)
+            }
         }
         super.viewDidLoad()
     }
