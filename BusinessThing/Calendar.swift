@@ -2,7 +2,7 @@ import UIKit
 
 class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate
 {
-    var sent: [(String, Int, String)] = []
+    var sent: [(String, Int, String, String)] = []
     var month = 0
     var dates = 31
     var globalCal = [Int]()
@@ -58,7 +58,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         manth.text = selectMonth(input: month)
         vERYCoolOutlet.reloadData()
     }
-    func findAssignments(input: [(String, Int, String)]) -> [Int]
+    func findAssignments(input: [(String, Int, String, String)]) -> [Int]
     {
         var total = [Int]()
         for _ in 0...dates
@@ -78,9 +78,9 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         return total
     }
-    func findAssignments(input: Int, compare: [(String, Int, String)]) -> [(String, Int, String)]
+    func findAssignments(input: Int, compare: [(String, Int, String, String)]) -> [(String, Int, String, String)]
     {
-        var returnArray: [(String, Int, String)] = []
+        var returnArray: [(String, Int, String, String)] = []
         for x in compare
         {
             let a = datea(input: x.2)

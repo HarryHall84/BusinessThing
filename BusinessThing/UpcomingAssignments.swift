@@ -1,11 +1,5 @@
 import UIKit
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
-     /*
-     String, Int, String
-     .0: Assignment Name
-     .1: Points Val.
-     .2: Due Date
-     */
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
     override func viewDidLoad() {
@@ -17,11 +11,15 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             self.sorter(juxtid: 1)
             self.tableViewOutlet.reloadData()
         })
+        let time = UIAction(title: "Time", handler: { _ in
+            self.sorter(juxtid: 3)
+            self.tableViewOutlet.reloadData()
+        })
         let weighted = UIAction(title: "Weighted", handler: { _ in
             self.sorter(juxtid: 0)
             self.tableViewOutlet.reloadData()
         })
-        let menu = UIMenu(title: "Organize based on...", children: [date, points, weighted])
+        let menu = UIMenu(title: "Organize based on...", children: [date, points, time, weighted])
         sortBtn.menu = menu
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
@@ -54,6 +52,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         cell.dueOutlet.text = "Due \(ViewController.basicSet[indexPath.row].2)"
         cell.nameOutlet.text = "\(ViewController.basicSet[indexPath.row].0)"
         cell.pointsOutlet.text =  "\(ViewController.basicSet[indexPath.row].1)"
+        cell.timeOutlet.text = "\(ViewController.basicSet[indexPath.row].3)"
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -65,12 +64,12 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     }
     func sorter(juxtid: Int)
     {
-        var high: (Int, Int)
         /*
         Int, Int
-        .0: Month / Point Val.
+        .0: Month / Point Val / Time.
         .1: Day
         */
+        var high: (Int, Int)
         switch juxtid
         {
         case 0:
@@ -173,8 +172,10 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                     prevMonthDatea = monthDatea
                 }
             }
+        case 3:
+            break
         default:
-            break;
+            break
         }
         
     }
