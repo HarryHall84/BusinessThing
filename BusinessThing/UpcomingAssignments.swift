@@ -28,7 +28,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         print(ViewController.basicSet)
         var d = (Date.now.description.split(separator: " "))[0].split(separator: "-")
         d.remove(at: 0)
-        var inp = datea(input: ViewController.basicSet[0].2)
+        var inp = datea(input: ViewController.basicSet[0].3)
         while(inp.0 < Int(d[0])! && inp.1 < Int(d[1])!)
         {
             ViewController.missingSet.append(ViewController.basicSet[0])
@@ -39,7 +39,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             }
             else
             {
-                inp = datea(input: ViewController.basicSet[0].2)
+                inp = datea(input: ViewController.basicSet[0].3)
             }
         }
         super.viewDidLoad()
@@ -49,10 +49,18 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
-        cell.dueOutlet.text = "Due \(ViewController.basicSet[indexPath.row].2)"
+        cell.dueOutlet.text = "Due \(ViewController.basicSet[indexPath.row].3)"
         cell.nameOutlet.text = "\(ViewController.basicSet[indexPath.row].0)"
         cell.pointsOutlet.text =  "\(ViewController.basicSet[indexPath.row].1)"
-        cell.timeOutlet.text = "\(ViewController.basicSet[indexPath.row].3)"
+        if ViewController.basicSet[indexPath.row].2
+        {
+            cell.pointsOutlet.text! += " Summitive Points"
+        }
+        else
+        {
+            cell.pointsOutlet.text! += " Formitive Points"
+        }
+        cell.timeOutlet.text = "\(ViewController.basicSet[indexPath.row].4)"
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -149,7 +157,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                 count = 0
                 for x in ViewController.basicSet
                 {
-                    let monthDatea = datea(input: x.2)
+                    let monthDatea = datea(input: x.3)
                     if monthDatea.0 < prevMonthDatea.0 && count > 0
                     {
                         let temp = ViewController.basicSet[count]

@@ -10,7 +10,7 @@ class SeeAssignmentsFromCal: UIViewController, UITableViewDelegate, UITableViewD
 {
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var helperText: UILabel!
-    var incoming: [(String, Int, String, String)] = []
+    var incoming: [(String, Int, Bool, String, String)] = []
     override func viewDidLoad()
     {
         if incoming.isEmpty

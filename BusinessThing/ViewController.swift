@@ -4,13 +4,14 @@ class ViewController: UIViewController
 {
     var isLogged = false
     /*
-    String, Int, String
+    String, Int, Bool, String, String
     .0: Assignment Name
     .1: Points Val.
-    .2: Due Date
-    .3: [OPTIONAL] Time Alloted
+    .2: Points Type
+    .3: Due Date
+    .4: [OPTIONAL] Time Alloted
     */
-    static var basicSet = [("English Assignment", 0, "Mar 5", ""), ("AP Gov Project", 60, "Apr 2", ""), ("Math Assignment", 7, "June 7", ""), ("Band Performance", 100, "May 12", "2 Hours"), ("Physics Project", 40, "Jan 3", ""), ("Physics Assignment", 1, "May 6", ""), ("Oral Practice", 5, "Mar 5", "")]
+    static var basicSet = [("English Assignment", 0, false, "Mar 5", ""), ("AP Gov Project", 60, true, "Apr 2", ""), ("Math Assignment", 7, false, "Jun 7", ""), ("Band Performance", 100, true, "May 12", "2 Hours"), ("Physics Project", 40, true, "Jan 3", ""), ("Physics Assignment", 1, false, "May 6", ""), ("Oral Practice", 5, false, "Mar 5", "")]
     /*
     String, Int, String
     .0: Assignment Name
@@ -18,7 +19,7 @@ class ViewController: UIViewController
     .2: Due Date
     .3: [OPTIONAL] Time Alloted
     */
-    static var missingSet = [("English Reflection", 20, "Feb 27", "")]
+    static var missingSet = [("English Reflection", 20, false, "Feb 27", "")]
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var welcomeMessage: UILabel!
     override func viewDidLoad()
