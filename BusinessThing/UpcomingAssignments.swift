@@ -2,7 +2,7 @@ import UIKit
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
-    override func viewDidLoad() {
+    override func viewDidLoad() { 
         let date = UIAction(title: "Date", handler: { _ in
             self.sorter(juxtid: 2)
             self.tableViewOutlet.reloadData()
@@ -28,7 +28,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         print(ViewController.basicSet)
         var d = (Date.now.description.split(separator: " "))[0].split(separator: "-")
         d.remove(at: 0)
-        var inp = datea(input: ViewController.basicSet[0].3)
+        var inp = datea(input: ViewController.basicSet[0].due)
         while(inp.0 < Int(d[0])! && inp.1 < Int(d[1])!)
         {
             ViewController.missingSet.append(ViewController.basicSet[0])
@@ -39,7 +39,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
             }
             else
             {
-                inp = datea(input: ViewController.basicSet[0].3)
+                inp = datea(input: ViewController.basicSet[0].due)
             }
         }
         super.viewDidLoad()
@@ -49,10 +49,10 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
-        cell.dueOutlet.text = "Due \(ViewController.basicSet[indexPath.row].3)"
-        cell.nameOutlet.text = "\(ViewController.basicSet[indexPath.row].0)"
-        cell.pointsOutlet.text =  "\(ViewController.basicSet[indexPath.row].1)"
-        if ViewController.basicSet[indexPath.row].2
+        cell.dueOutlet.text = "Due \(ViewController.basicSet[indexPath.row].due)"
+        cell.nameOutlet.text = "\(ViewController.basicSet[indexPath.row].name)"
+        cell.pointsOutlet.text =  "\(ViewController.basicSet[indexPath.row].points)"
+        if ViewController.basicSet[indexPath.row].pType
         {
             cell.pointsOutlet.text! += " Summitive Points"
         }
@@ -60,7 +60,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         {
             cell.pointsOutlet.text! += " Formitive Points"
         }
-        cell.timeOutlet.text = "\(ViewController.basicSet[indexPath.row].4)"
+        cell.timeOutlet.text = "\(ViewController.basicSet[indexPath.row].time)"
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -131,7 +131,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                     high.0 = x
                     for y in x + 1 ..< ViewController.basicSet.count
                     {
-                        if ViewController.basicSet[y].1 > ViewController.basicSet[high.0].1
+                        if ViewController.basicSet[y].points > ViewController.basicSet[high.0].points
                         {
                             high.0 = y
                         }
@@ -157,7 +157,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                 count = 0
                 for x in ViewController.basicSet
                 {
-                    let monthDatea = datea(input: x.3)
+                    let monthDatea = datea(input: x.due)
                     if monthDatea.0 < prevMonthDatea.0 && count > 0
                     {
                         let temp = ViewController.basicSet[count]

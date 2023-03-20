@@ -19,6 +19,7 @@
 		31DCADF22922D885001BC9CC /* BusinessThingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCADF12922D885001BC9CC /* BusinessThingTests.swift */; };
 		31DCADFC2922D885001BC9CC /* BusinessThingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCADFB2922D885001BC9CC /* BusinessThingUITests.swift */; };
 		31DCADFE2922D885001BC9CC /* BusinessThingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCADFD2922D885001BC9CC /* BusinessThingUITestsLaunchTests.swift */; };
+		4A042FBD29C8B31200FFC932 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A042FBC29C8B31200FFC932 /* Assignment.swift */; };
 		4A525BF0292D634F00FD4A96 /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A525BEF292D634F00FD4A96 /* CustomCollectionCell.swift */; };
 		4AAD008229785533008B5E89 /* SeeAssignmentsFromCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD008129785533008B5E89 /* SeeAssignmentsFromCal.swift */; };
 		4AE141B42926CC2E00DBBDCB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE141B32926CC2E00DBBDCB /* CustomCell.swift */; };
@@ -58,6 +59,7 @@
 		31DCADF72922D885001BC9CC /* BusinessThingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusinessThingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DCADFB2922D885001BC9CC /* BusinessThingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessThingUITests.swift; sourceTree = "<group>"; };
 		31DCADFD2922D885001BC9CC /* BusinessThingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessThingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4A042FBC29C8B31200FFC932 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		4A525BEF292D634F00FD4A96 /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
 		4AAD008129785533008B5E89 /* SeeAssignmentsFromCal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAssignmentsFromCal.swift; sourceTree = "<group>"; };
 		4AE141B32926CC2E00DBBDCB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				4AE141B32926CC2E00DBBDCB /* CustomCell.swift */,
 				31177E09292428EB0009C50F /* MissingAssignments.swift */,
 				31177E05292428860009C50F /* UpcomingAssignments.swift */,
+				4A042FBC29C8B31200FFC932 /* Assignment.swift */,
 				31DCADE32922D885001BC9CC /* Assets.xcassets */,
 				31DCADE52922D885001BC9CC /* LaunchScreen.storyboard */,
 				31DCADE82922D885001BC9CC /* Info.plist */,
@@ -284,6 +287,7 @@
 				31DCADDD2922D884001BC9CC /* SceneDelegate.swift in Sources */,
 				4AE141B42926CC2E00DBBDCB /* CustomCell.swift in Sources */,
 				31177E082924289B0009C50F /* Calendar.swift in Sources */,
+				4A042FBD29C8B31200FFC932 /* Assignment.swift in Sources */,
 				4A525BF0292D634F00FD4A96 /* CustomCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

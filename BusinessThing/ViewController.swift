@@ -3,23 +3,16 @@ import UIKit
 class ViewController: UIViewController
 {
     var isLogged = false
-    /*
-    String, Int, Bool, String, String
-    .0: Assignment Name
-    .1: Points Val.
-    .2: Points Type
-    .3: Due Date
-    .4: [OPTIONAL] Time Alloted
-    */
-    static var basicSet = [("English Assignment", 0, false, "Mar 5", ""), ("AP Gov Project", 60, true, "Apr 2", ""), ("Math Assignment", 7, false, "Jun 7", ""), ("Band Performance", 100, true, "May 12", "2 Hours"), ("Physics Project", 40, true, "Jan 3", ""), ("Physics Assignment", 1, false, "May 6", ""), ("Oral Practice", 5, false, "Mar 5", "")]
-    /*
-    String, Int, String
-    .0: Assignment Name
-    .1: Points Val.
-    .2: Due Date
-    .3: [OPTIONAL] Time Alloted
-    */
-    static var missingSet = [("English Reflection", 20, false, "Feb 27", "")]
+    static var basicSet =
+        [
+        Assignent(name: "English Assignment", points: 3, pType: false, due: "Mar 5"),
+        Assignent(name: "AP Gov Project", points: 60, pType: true, due: "Apr 2"),
+        Assignent(name: "Math Assignment", points: 8, pType: false, due: "Jun 7"),
+        Assignent(name: "Band Performance", points: 100, pType: true, due: "May 12", time: "2 Hours"),
+        Assignent(name: "Physics Quiz", points: 40, pType: true, due: "Jan 3"),
+        Assignent(name: "Health Test", points: 75, pType: true, due: "Jan 8")
+        ]
+    static var missingSet = [Assignent]()
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var welcomeMessage: UILabel!
     override func viewDidLoad()

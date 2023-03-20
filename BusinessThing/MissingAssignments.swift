@@ -14,8 +14,18 @@ class MissingAssignments: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCellMissing", for: indexPath) as! CustomCell
-        cell.missNameOutlet.text = "\(ViewController.missingSet[indexPath.row].0)"
-        cell.missPointsOutlet.text = "\(ViewController.missingSet[indexPath.row].1)"
+        cell.missNameOutlet.text = "\(ViewController.missingSet[indexPath.row].name)"
+        cell.missPointsOutlet.text = "\(ViewController.missingSet[indexPath.row].points)"
+        if ViewController.missingSet[indexPath.row].pType
+        {
+            cell.missPointsOutlet.text! += "Summitive Points"
+        }
+        else
+        {
+            cell.missPointsOutlet.text! += "Formative Points"
+        }
+        cell.missDueOutlet.text = ViewController.missingSet[indexPath.row].due
+        cell.missTimeOutlet.text = ViewController.missingSet[indexPath.row].time
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

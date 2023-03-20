@@ -2,7 +2,7 @@ import UIKit
 
 class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate
 {
-    var sent: [(String, Int, Bool, String, String)] = []
+    var sent = [Assignent]()
     var month = 0
     var dates = 31
     var globalCal = [Int]()
@@ -58,7 +58,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         manth.text = selectMonth(input: month)
         vERYCoolOutlet.reloadData()
     }
-    func findAssignments(input: [(String, Int, Bool, String, String)]) -> [Int]
+    func findAssignments(input: [Assignent]) -> [Int]
     {
         var total = [Int]()
         for _ in 0...dates
@@ -69,7 +69,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         {
             for y in input
             {
-                let b = datea(input: y.3)
+                let b = datea(input: y.due)
                 if b.0 == month && b.1 == x
                 {
                     total[x - 1] += 1
@@ -78,12 +78,12 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         return total
     }
-    func findAssignments(input: Int, compare: [(String, Int, Bool, String, String)]) -> [(String, Int, Bool, String, String)]
+    func findAssignments(input: Int, compare: [Assignent]) -> [Assignent]
     {
-        var returnArray: [(String, Int, Bool, String, String)] = []
+        var returnArray = [Assignent]()
         for x in compare
         {
-            let a = datea(input: x.3)
+            let a = datea(input: x.due)
             if a.0 == month && a.1 == input + 1
             {
                 returnArray.append(x)
@@ -253,7 +253,7 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
         if segue.identifier == "CalRedirect"
         {
             let destination = segue.destination as! SeeAssignmentsFromCal
-            destination.incoming = sent 
+            destination.incoming = sent
         }
     }
 }

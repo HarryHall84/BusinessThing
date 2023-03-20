@@ -10,7 +10,7 @@ class SeeAssignmentsFromCal: UIViewController, UITableViewDelegate, UITableViewD
 {
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var helperText: UILabel!
-    var incoming: [(String, Int, Bool, String, String)] = []
+    var incoming = [Assignent]()
     override func viewDidLoad()
     {
         if incoming.isEmpty
@@ -35,8 +35,18 @@ class SeeAssignmentsFromCal: UIViewController, UITableViewDelegate, UITableViewD
     {
         let cell = tableViewOutlet.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomCell
         let row = indexPath.row
-        cell.calPointsOutlet.text = String(incoming[row].1)
-        cell.calNameOutlet.text = incoming[row].0
+        cell.calPointsOutlet.text = String(incoming[row].points)
+        if incoming[row].pType
+        {
+            cell.calPointsOutlet.text! += "Summitive Points"
+        }
+        else
+        {
+            cell.calPointsOutlet.text! += "Formative Points"
+        }
+        cell.calNameOutlet.text = incoming[row].name
+        cell.calDueOutlet.text = incoming[row].due
+        cell.calTimeOutlet.text = incoming[row].time
         return cell
     }
 }
