@@ -181,6 +181,7 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
                 }
             }
         case 3:
+            // is this for time? Im not touching this if it isn't, but it looks good so far
             break
         default:
             break

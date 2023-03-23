@@ -18,11 +18,11 @@ class MissingAssignments: UIViewController, UITableViewDelegate, UITableViewData
         cell.missPointsOutlet.text = "\(ViewController.missingSet[indexPath.row].points)"
         if ViewController.missingSet[indexPath.row].pType
         {
-            cell.missPointsOutlet.text! += "Summitive Points"
+            cell.missPointsOutlet.text! += " Summitive Points"
         }
         else
         {
-            cell.missPointsOutlet.text! += "Formative Points"
+            cell.missPointsOutlet.text! += " Formative Points"
         }
         cell.missDueOutlet.text = ViewController.missingSet[indexPath.row].due
         cell.missTimeOutlet.text = ViewController.missingSet[indexPath.row].time
