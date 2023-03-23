@@ -2,7 +2,7 @@ import UIKit
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
-    override func viewDidLoad() { 
+    override func viewDidLoad() {
         let date = UIAction(title: "Date", handler: { _ in
             self.sorter(juxtid: 2)
             self.tableViewOutlet.reloadData()
@@ -187,46 +187,88 @@ class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
     }
-    func datea(input: String) -> (Int, Int)
+    @IBAction func addAssignment(_ sender: Any)
     {
-        let x = input.split(separator: " ")
-         /*
-         Int, Int
-         .0: Month
-         .1: Day
-         */
-        var y: (Int, Int)
-        switch x[0].lowercased()
+        let new = Assignent()
+        let err = UIAlertController(title: "Add a New Assignment", message: "Provide the following information:", preferredStyle: .alert)
+        err.addTextField{(textField) in
+            textField.placeholder = "Name"}
+        err.addTextField{(textField) in
+            textField.placeholder = "Date"}
+        err.addTextField{(textField) in
+            textField.placeholder = "Points"}
+        err.addTextField{(textField) in
+            textField.placeholder = "Time [Optional]"}
+        err.addAction(UIAlertAction(title: "Post as Formative", style: .default, handler: { alert -> Void in
+            if Int(err.textFields![2].text!) == nil
+            {
+                self.didFail(type: 1)
+            }
+            else if datea(input: err.textFields![1].text!).0 == -1
+            {
+                self.didFail(type: 2)
+            }
+            else if datea(input: err.textFields![1].text!).1 == -1
+            {
+                self.didFail(type: 3)
+            }
+            else
+            {
+                new.name = err.textFields![0].text ?? "Unknown Assignment"
+                new.due = err.textFields![1].text ?? "Unassigned"
+                new.points = Int(err.textFields![2].text!) ?? -1
+                new.time = err.textFields![3].text ?? ""
+                new.pType = false
+                ViewController.basicSet.append(new)
+                self.tableViewOutlet.reloadData()
+            }
+        }))
+        err.addAction(UIAlertAction(title: "Post as Summitive", style: .default, handler: { alert -> Void in
+            if Int(err.textFields![2].text!) == nil
+            {
+                self.didFail(type: 1)
+            }
+            else if datea(input: err.textFields![1].text!).0 == -1
+            {
+                self.didFail(type: 2)
+            }
+            else if datea(input: err.textFields![1].text!).1 == -1
+            {
+                self.didFail(type: 3)
+            }
+            else
+            {
+                new.name = err.textFields![0].text ?? "Unknown Assignment"
+                new.due = err.textFields![1].text ?? "Unassigned"
+                new.points = Int(err.textFields![2].text!) ?? -1
+                new.time = err.textFields![3].text ?? ""
+                new.pType = true
+                ViewController.basicSet.append(new)
+                self.tableViewOutlet.reloadData()
+            }
+        }))
+        err.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(err, animated: true, completion: nil)
+    }
+    func didFail(type: Int)
+    {
+        switch type
         {
-        case "jan":
-            y.0 = 0
-        case "feb":
-            y.0 = 1
-        case "mar":
-            y.0 = 2
-        case "apr":
-            y.0 = 3
-        case "may":
-            y.0 = 4
-        case "jun":
-            y.0 = 5
-        case "jul":
-            y.0 = 6
-        case "aug":
-            y.0 = 7
-        case "sep":
-            y.0 = 8
-        case "oct":
-            y.0 = 9
-        case "nov":
-            y.0 = 10
-        case "dec":
-            y.0 = 11
+        case 1:
+            let derr = UIAlertController(title: "Bad Points Value", message: "Make sure your points are formatted as a number.", preferredStyle: .alert)
+            derr.addAction(UIAlertAction(title: "Ok", style: .default))
+            self.present(derr, animated: true)
+        case 2:
+            let derr = UIAlertController(title: "Bad Date Format", message: "Limit your month to their first 3 characters.", preferredStyle: .alert)
+            derr.addAction(UIAlertAction(title: "Ok", style: .default))
+            self.present(derr, animated: true)
+        case 3:
+            let derr = UIAlertController(title: "Bad Date Format", message: "Make sure your date is formatted as a number.", preferredStyle: .alert)
+            derr.addAction(UIAlertAction(title: "Ok", style: .default))
+            self.present(derr, animated: true)
         default:
-            y.0 = -1
+            break
         }
-        y.1 = Int(x[1])!
-        return y;
     }
     func dynamicWeights(input: (Int, Int))
     {

@@ -36,10 +36,12 @@ class ViewController: UIViewController
         err.addAction(UIAlertAction(title: "Submit", style: .default, handler: { alert -> Void in
             name = err.textFields![0].text ?? "Unknown"
             pass = err.textFields![1].text ?? "Empty"
-            if(name == "debugDan" && pass == "123")
+            if((name == "debugDan" && pass == "123") || (name == "a" && pass == ""))
             {
                 self.isLogged = true
-            } else {
+            }
+            else
+            {
                 let loginFail = UIAlertController(title: "Your username or password is incorrect. Please try again", message: "", preferredStyle: .alert)
                 loginFail.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(loginFail, animated: true, completion: nil)
