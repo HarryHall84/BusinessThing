@@ -15,8 +15,12 @@ class ViewController: UIViewController
     static var missingSet = [Assignent]()
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var welcomeMessage: UILabel!
+    @IBOutlet weak var sloganLabel: UILabel!
+    
+
     override func viewDidLoad()
     {
+        sloganLabel.text = "KNOW more knowledge \nNO more assignments"
         welcomeMessage.isHidden = true
         tabBarController?.tabBar.items?[1].isEnabled = false
         tabBarController?.tabBar.items?[2].isEnabled = false

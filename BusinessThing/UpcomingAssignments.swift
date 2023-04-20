@@ -2,7 +2,9 @@ import UIKit
 class UpcomingAssignments: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var sortBtn: UIButton!
+    @IBOutlet weak var upcomingLabel: UILabel!
     override func viewDidLoad() {
+        upcomingLabel.text = "Upcoming\nAssignments"
         let date = UIAction(title: "Date", handler: { _ in
             self.sorter(juxtid: 2)
             self.tableViewOutlet.reloadData()
