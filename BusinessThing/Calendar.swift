@@ -176,8 +176,14 @@ class Calendar: UIViewController, UICollectionViewDelegate, UICollectionViewData
     {
         if segue.identifier == "CalRedirect"
         {
+            print("going to view")
             let destination = segue.destination as! SeeAssignmentsFromCal
             destination.incoming = sent
+        }
+        
+        if segue.identifier == "blank"
+        {
+            print("Going to blank")
         }
     }
     
